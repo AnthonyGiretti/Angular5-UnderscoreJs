@@ -1,6 +1,8 @@
+import { Injectable } from '@angular/core';
 import { _ } from 'underscore';
 
-export class CollectionsHelpers {
+@Injectable()
+export class CollectionsService {
 
   constructor() { }
 
