@@ -6,7 +6,7 @@ import { ObjectsService } from './objects';
 import { _ } from 'underscore';
 
 @Injectable()
-export class HelperService {
+export class HelpersService {
 
   constructor(public readonly Collections: CollectionsService,
               public readonly Arrays: ArraysService,
