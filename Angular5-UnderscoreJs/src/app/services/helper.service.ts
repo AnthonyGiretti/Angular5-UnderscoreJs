@@ -1,13 +1,13 @@
+import { CollectionsHelpers } from './collections.services';
 import { Injectable } from '@angular/core';
 import { _ } from 'underscore';
 
 @Injectable()
 export class HelperService {
 
-  constructor() { }
+  public readonly Collections: CollectionsHelpers;
 
-  public each(array, delegate) {
-    return _.each(array, delegate);
+  constructor() { 
+    this.Collections = new CollectionsHelpers();
   }
-
 }

@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
 
   public ngOnInit() {
 
-    this._helper.each(this._fruits, console.log);
+    this._helper.Collections.each(this._fruits, console.log);
 
   }
 
