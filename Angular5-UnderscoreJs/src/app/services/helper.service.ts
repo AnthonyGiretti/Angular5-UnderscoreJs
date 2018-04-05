@@ -1,4 +1,4 @@
-import { CollectionsHelpers } from './collections.services';
+import { CollectionsHelpers } from './collections';
 import { Injectable } from '@angular/core';
 import { _ } from 'underscore';
 
