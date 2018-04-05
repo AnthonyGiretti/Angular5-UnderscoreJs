@@ -3,7 +3,6 @@ import { CollectionsService } from './collections';
 import { FunctionsService } from './functions';
 import { Injectable } from '@angular/core';
 import { ObjectsService } from './objects';
-import { _ } from 'underscore';
 
 @Injectable()
 export class HelpersService {

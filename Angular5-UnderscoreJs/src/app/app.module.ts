@@ -1,7 +1,11 @@
 import { AppComponent } from './app.component';
+import { ArraysService } from './services/arrays';
 import { BrowserModule } from '@angular/platform-browser';
-import { HelperService } from "./services/helper.service";
+import { CollectionsService } from './services/collections';
+import { FunctionsService } from './services/functions';
+import { HelpersService } from "./services/helpers.service";
 import { NgModule } from '@angular/core';
+import { ObjectsService } from './services/objects';
 
 @NgModule({
   declarations: [
@@ -10,7 +14,7 @@ import { NgModule } from '@angular/core';
   imports: [
     BrowserModule
   ],
-  providers: [HelperService],
+  providers: [HelpersService, CollectionsService, ArraysService, ObjectsService, FunctionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
