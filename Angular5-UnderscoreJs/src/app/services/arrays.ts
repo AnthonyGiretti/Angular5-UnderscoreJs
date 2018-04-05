@@ -1,9 +1,16 @@
+import { Injectable } from '@angular/core';
 import { _ } from 'underscore';
 
-export class ArraysHelpers {
+@Injectable()
+export class ArraysService {
 
   constructor() { }
 
+  /**
+   * Returns the first element of an array. Passing n will return the first n elements of the array.
+   * @param array 
+   * @param n 
+   */
   public first(array:any[], n?: number): any | any[] {
     
     if (null == n)
