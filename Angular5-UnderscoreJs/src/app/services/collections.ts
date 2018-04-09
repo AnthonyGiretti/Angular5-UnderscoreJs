@@ -41,9 +41,11 @@ export class CollectionsService {
   public reduce(array: Array<any> | object, delegate: Function, memo?: any): any {
 
     if (memo != null) {
-      return _.reduce(array, function(memo, num){ return memo + num; });
+      return _.reduce(array, delegate);
     }
-    return _.reduce(array, function(memo, num){ return memo + num; }, memo);
+    return _.reduce(array, delegate, memo);
   }
+
+  
 
 }
