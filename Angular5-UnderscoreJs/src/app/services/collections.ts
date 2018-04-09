@@ -28,5 +28,4 @@ export class CollectionsService {
     return _.map(array, delegate);
   }
 
-
 }
