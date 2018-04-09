@@ -41,7 +41,7 @@ export class CollectionsService {
   public reduce(array: Array<any> | object, delegate: Function, memo?: any): any {
 
     if (memo == null) {
-      return _.reduce(array, delegate, 0);
+      return _.reduce(array, delegate);
     }
     return _.reduce(array, delegate, memo);
   }
@@ -56,7 +56,7 @@ export class CollectionsService {
   public reduceRight(array: Array<any> | object, delegate: Function, memo?: any): any {
 
     if (memo == null) {
-      return _.reduceRight(array, delegate, 0);
+      return _.reduceRight(array, delegate);
     }
     return _.reduceRight(array, delegate, memo);
   }
