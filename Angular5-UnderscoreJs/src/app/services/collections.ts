@@ -22,10 +22,28 @@ export class CollectionsService {
    * Produces a new array of values by mapping each value in list through a transformation function (iteratee). 
    * The iteratee is passed three arguments: the value, then the index (or key) of the iteration, and finally a reference to the entire list.
    * @param array 
-   * @param iteratee 
+   * @param delegate 
    */
-  public map(array, delegate): Array<any> {
+  public map(array: Array<any>, delegate: Function): Array<any> {
     return _.map(array, delegate);
+  }
+
+  /**
+   * Also known as inject and foldl, reduce boils down a list of values into a single value. 
+   * Memo is the initial state of the reduction, and each successive step of it should be returned by iteratee. 
+   * The iteratee is passed four arguments: the memo, then the value and index (or key) of the iteration, and finally a reference to the entire list.
+   * If no memo is passed to the initial invocation of reduce, the iteratee is not invoked on the first element of the list. 
+   * The first element is instead passed as the memo in the invocation of the iteratee on the next element in the list.
+   * @param array 
+   * @param delegate 
+   * @param memo 
+   */
+  public reduce(array: Array<any>, delegate: Function, memo?: any): any {
+
+    if (memo != null) {
+      return _.reduce(array, function(memo, num){ return memo + num; });
+    }
+    return _.reduce(array, function(memo, num){ return memo + num; }, memo);
   }
 
 }
