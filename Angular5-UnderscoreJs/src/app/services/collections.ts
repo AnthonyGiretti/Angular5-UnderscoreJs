@@ -14,7 +14,7 @@ export class CollectionsService {
    * @param array 
    * @param delegate 
    */
-  public each(array: Array<any>, delegate: Function): any {
+  public each(array: Array<any> | object, delegate: Function): any {
     return _.each(array, delegate);
   }
 
@@ -24,7 +24,7 @@ export class CollectionsService {
    * @param array 
    * @param delegate 
    */
-  public map(array: Array<any>, delegate: Function): Array<any> {
+  public map(array: Array<any> | object, delegate: Function): Array<any> {
     return _.map(array, delegate);
   }
 
@@ -38,7 +38,7 @@ export class CollectionsService {
    * @param delegate 
    * @param memo 
    */
-  public reduce(array: Array<any>, delegate: Function, memo?: any): any {
+  public reduce(array: Array<any> | object, delegate: Function, memo?: any): any {
 
     if (memo != null) {
       return _.reduce(array, function(memo, num){ return memo + num; });

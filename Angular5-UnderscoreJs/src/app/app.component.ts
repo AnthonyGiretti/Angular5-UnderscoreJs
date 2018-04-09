@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
 
     // Collections
     this._helper.Collections.each(["Apple", "Banana", "Grapefruit"], console.log);
+    this._helper.Collections.each({one: 1, two: 2, three: 3}, console.log);
     this._helper.Collections.map([1, 2, 3], function(num){ return num * 3; });
     this._helper.Collections.map({one: 1, two: 2, three: 3}, (num) =>{ return num * 3; });
 
