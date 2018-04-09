@@ -15,21 +15,25 @@ export class AppComponent implements OnInit {
   public ngOnInit() {
 
     // Collections
-    this._helper.Collections.each(["Apple", "Banana", "Grapefruit"], (value, key) => {console.log("Value :" + value + " - "+ "Key :" + key)});
-    this._helper.Collections.each({one: 1, two: 2, three: 3}, (value, key) => {console.log("Value :" + value + " - "+ "Key :" + key)});
+    this._helper.Collections.each(["Apple", "Banana", "Grapefruit"], (value, key) => {console.log("each sample: Value :" + value + " - "+ "Key :" + key)});
+    this._helper.Collections.each({one: 1, two: 2, three: 3}, (value, key) => {console.log("each sample: Value :" + value + " - "+ "Key :" + key)});
 
-    console.log(this._helper.Collections.map([1, 2, 3], function(num){ return num * 3; }));
-    console.log(this._helper.Collections.map({one: 1, two: 2, three: 3}, (num) =>{ return num * 2; }));
+    console.log("map sample: " + this._helper.Collections.map([1, 2, 3], function(num){ return num * 3; }));
+    console.log("map sample: " + this._helper.Collections.map({one: 1, two: 2, three: 3}, (num) =>{ return num * 2; }));
 
-    console.log(this._helper.Collections.reduce([1, 2, 3], function(memo, num){ return memo + num; }));
-    console.log(this._helper.Collections.reduce([1, 2, 3], (memo, num) => { return memo + num; }, 1));
-    console.log(this._helper.Collections.reduce({one: 1, two: 2, three: 3}, function(num) { return num * 2; }));
-    console.log(this._helper.Collections.reduce({one: 1, two: 2, three: 3}, (num) => { return num * 2; }, 1));
+    console.log("reduce sample: " + this._helper.Collections.reduce([1, 2, 3], function(memo, num){ return memo + num; }));
+    console.log("reduce sample: " + this._helper.Collections.reduce([1, 2, 3], (memo, num) => { return memo + num; }, 1));
+    console.log("reduce sample: " + this._helper.Collections.reduce({one: 1, two: 2, three: 3}, function(num) { return num * 2; }));
+    console.log("reduce sample: " + this._helper.Collections.reduce({one: 1, two: 2, three: 3}, (num) => { return num * 2; }, 1));
 
-
+    console.log(this._helper.Collections.reduceRight([1, 2, 3], function(memo, num){ return memo + num; }));
+    console.log(this._helper.Collections.reduceRight([1, 2, 3], (memo, num) => { return memo + num; }, 1));
+    console.log(this._helper.Collections.reduceRight({one: 1, two: 2, three: 3}, function(num) { return num * 2; }));
+    console.log(this._helper.Collections.reduceRight({one: 1, two: 2, three: 3}, (num) => { return num * 2; }, 1));
+    
     // Arrays 
-    console.log(this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"]));
-    console.log(this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"], 2));
+    console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"]));
+    console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"], 2));
 
   }
 
