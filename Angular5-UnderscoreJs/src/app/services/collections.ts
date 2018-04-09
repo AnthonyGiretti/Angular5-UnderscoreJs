@@ -14,7 +14,7 @@ export class CollectionsService {
    * @param array 
    * @param delegate 
    */
-  public each(array, delegate): any {
+  public each(array: Array<any>, delegate: Function): any {
     return _.each(array, delegate);
   }
 
@@ -24,8 +24,9 @@ export class CollectionsService {
    * @param array 
    * @param iteratee 
    */
-  public map(array, iteratee): Array<any> {
-    return _.map(array, iteratee);
+  public map(array, delegate): Array<any> {
+    return _.map(array, delegate);
   }
+
 
 }
