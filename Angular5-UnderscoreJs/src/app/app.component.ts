@@ -17,8 +17,14 @@ export class AppComponent implements OnInit {
     // Collections
     this._helper.Collections.each(["Apple", "Banana", "Grapefruit"], (value, key) => {console.log("Value :" + value + " - "+ "Key :" + key)});
     this._helper.Collections.each({one: 1, two: 2, three: 3}, (value, key) => {console.log("Value :" + value + " - "+ "Key :" + key)});
+
     this._helper.Collections.map([1, 2, 3], function(num){ return num * 3; });
     this._helper.Collections.map({one: 1, two: 2, three: 3}, (num) =>{ return num * 2; });
+
+    this._helper.Collections.reduce([1, 2, 3], function(memo, num){ return memo + num; });
+    this._helper.Collections.reduce([1, 2, 3], (memo, num) => { return memo + num; }, 1);
+    this._helper.Collections.reduce({one: 1, two: 2, three: 3}, function(num) { return num * 2; });
+    this._helper.Collections.reduce({one: 1, two: 2, three: 3}, (num) => { return num * 2; }, 1);
 
 
     // Arrays 
