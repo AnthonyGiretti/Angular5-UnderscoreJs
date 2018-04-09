@@ -46,6 +46,19 @@ export class CollectionsService {
     return _.reduce(array, delegate, memo);
   }
 
-  
+
+  /**
+   * The right-associative version of reduce.
+   * @param array 
+   * @param delegate 
+   * @param memo 
+   */
+  public reduceRight(array: Array<any> | object, delegate: Function, memo?: any): any {
+
+    if (memo != null) {
+      return _.reduceRight(array, delegate);
+    }
+    return _.reduceRight(array, delegate, memo);
+  }
 
 }
