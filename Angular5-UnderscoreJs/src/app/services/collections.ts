@@ -18,4 +18,14 @@ export class CollectionsService {
     return _.each(array, delegate);
   }
 
+  /**
+   * Produces a new array of values by mapping each value in list through a transformation function (iteratee). 
+   * The iteratee is passed three arguments: the value, then the index (or key) of the iteration, and finally a reference to the entire list.
+   * @param array 
+   * @param iteratee 
+   */
+  public map(array, iteratee): Array<any> {
+    return _.map(array, iteratee);
+  }
+
 }
