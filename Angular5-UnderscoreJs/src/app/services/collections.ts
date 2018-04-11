@@ -61,4 +61,13 @@ export class CollectionsService {
     return _.reduceRight(array, delegate, memo);
   }
 
+  /**
+   * Looks through each value in the list, returning the first one that passes a truth test (predicate), or undefined if no value passes the test. 
+   * The function returns as soon as it finds an acceptable element, and doesn't traverse the entire list.
+   * @param array 
+   * @param delegate 
+   */
+  public find(array: Array<any> | object, delegate: Function): any {
+    return _.find(array, delegate);
+  }
 }
