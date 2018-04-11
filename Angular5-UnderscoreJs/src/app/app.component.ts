@@ -38,6 +38,9 @@ export class AppComponent implements OnInit {
     console.log("find sample: " + this._helper.Collections.find([1, 2, 3, 4], (num) => { return num % 2 == 0; }));
     console.log("find sample: " + this._helper.Collections.find({one: 1, two: 2, three: 3, four: 4}, function(num) { return num % 2 == 0; }));
 
+    console.log("filter sample: " + this._helper.Collections.filter([1, 2, 3, 4], (num) => { return num % 2 == 0; }));
+    console.log("filter sample: " + this._helper.Collections.filter({one: 1, two: 2, three: 3, four: 4}, function(num) { return num % 2 == 0; }));
+
     // Arrays 
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"]));
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"], 2));
