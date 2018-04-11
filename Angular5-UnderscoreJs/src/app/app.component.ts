@@ -35,8 +35,8 @@ export class AppComponent implements OnInit {
     console.log("reduceRight sample: " + this._helper.Collections.reduceRight(["A", "B", "C"], function(a, b) { return a+b; }));
     console.log("reduceRight sample: " + this._helper.Collections.reduceRight(["A", "B", "C"], function(a, b) { return a+b; }, "D"));
     
-    console.log("find sample: " + this._helper.Collections.find([1, 2, 3], (num) => { return num % 2 == 0; }));
-    console.log("find sample: " + this._helper.Collections.find({one: 1, two: 2, three: 3}, function(num) { return num % 2 == 0; }));
+    console.log("find sample: " + this._helper.Collections.find([1, 2, 3, 4], (num) => { return num % 2 == 0; }));
+    console.log("find sample: " + this._helper.Collections.find({one: 1, two: 2, three: 3, four: 4}, function(num) { return num % 2 == 0; }));
 
     // Arrays 
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"]));

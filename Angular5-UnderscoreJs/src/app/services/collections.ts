@@ -70,4 +70,14 @@ export class CollectionsService {
   public find(array: Array<any> | object, delegate: Function): any {
     return _.find(array, delegate);
   }
+
+  /**
+   * Looks through each value in the list, returning an array of all the values that pass a truth test (predicate).
+   * @param array 
+   * @param delegate 
+   */
+  public filter(array: Array<any> | object, delegate: Function): any {
+    return _.filter(array, delegate);
+  }
+
 }
