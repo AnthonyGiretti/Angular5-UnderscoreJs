@@ -44,6 +44,9 @@ export class AppComponent implements OnInit {
     console.log("where sample: ");
     console.log(this._helper.Collections.where([{name: "Apple", category: "fruit"}, {name: "Banana", category: "fruit"}, {name: "carrot", category: "vegetable"}], {category: "fruit"}));
 
+    console.log("findWhere sample: ");
+    console.log(this._helper.Collections.findWhere([{name: "Apple", category: "fruit"}, {name: "Banana", category: "fruit"}, {name: "carrot", category: "vegetable"}], {category: "fruit"}));
+
     // Arrays 
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"]));
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"], 2));
