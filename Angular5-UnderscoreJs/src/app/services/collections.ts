@@ -99,4 +99,13 @@ export class CollectionsService {
     return _.findWhere(array, properties);
   }
 
+  /**
+   * Returns the values in list without the elements that the truth test (predicate) passes. The opposite of filter.
+   * @param array 
+   * @param delegate 
+   */
+  public reject(array: Array<any> | object, delegate: Function): any {
+    return _.reject(array, delegate);
+  }
+
 }
