@@ -80,4 +80,13 @@ export class CollectionsService {
     return _.filter(array, delegate);
   }
 
+  /**
+   * Looks through each value in the list, returning an array of all the values that contain all of the key-value pairs listed in properties.
+   * @param array 
+   * @param properties 
+   */
+  public where(array: Array<any> | object, properties: any): any[] {
+    return _.where(array, properties);
+  }
+
 }
