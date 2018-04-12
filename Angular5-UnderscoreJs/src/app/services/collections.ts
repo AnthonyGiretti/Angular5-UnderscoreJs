@@ -89,4 +89,14 @@ export class CollectionsService {
     return _.where(array, properties);
   }
 
+  /**
+   * Looks through the list and returns the first value that matches all of the key-value pairs listed in properties.
+   * If no match is found, or if list is empty, undefined will be returned.
+   * @param array 
+   * @param properties 
+   */
+  public findWhere(array: Array<object>, properties: any): any[] {
+    return _.findWhere(array, properties);
+  }
+
 }
