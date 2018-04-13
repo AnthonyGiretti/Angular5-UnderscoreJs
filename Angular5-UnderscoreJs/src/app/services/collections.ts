@@ -108,4 +108,13 @@ export class CollectionsService {
     return _.reject(array, delegate);
   }
 
+  /**
+   * Returns true if all of the values in the list pass the predicate truth test. Short-circuits and stops traversing the list if a false element is found.
+   * @param array 
+   * @param delegate 
+   */
+  public every(array: Array<any> | object, delegate : Function): boolean {
+    return _.every(array, delegate);
+  }
+
 }
