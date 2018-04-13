@@ -126,4 +126,26 @@ export class CollectionsService {
     return _.some(array, delegate);
   }
 
+  /**
+   * Returns true if the value is present in the list. 
+   * Uses indexOf internally, if list is an Array. 
+   * Use fromIndex to start your search at a given index.
+   * @param array 
+   * @param value 
+   * @param fromIndex 
+   */
+  public contains(array: Array<any> | object, value: any, fromIndex?: number): boolean {  
+    if (array instanceof Array) {
+      if (fromIndex == null) {
+        return _.contains(array, value);
+      }
+      else {
+        return _.contains(array, value, fromIndex);
+      }
+    } 
+    else {
+      return _.contains(array, value);
+    }    
+  }
+
 }
