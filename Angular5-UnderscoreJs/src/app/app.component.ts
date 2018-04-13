@@ -53,6 +53,9 @@ export class AppComponent implements OnInit {
     console.log("every sample: " + this._helper.Collections.every([2, 4, 5], (num) => { return num % 2 == 0; }));
     console.log("every sample: " + this._helper.Collections.every({two: 2, four: 4, six: 6}, function(num) { return num % 2 == 0; }));
 
+    console.log("some sample: " + this._helper.Collections.some([2, 4, 5], (num) => { return num % 2 == 0; }));
+    console.log("some sample: " + this._helper.Collections.some({two: 2, four: 4, six: 6}, function(num) { return num % 2 == 0; }));
+
     // Arrays 
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"]));
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"], 2));
