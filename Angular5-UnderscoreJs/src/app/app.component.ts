@@ -67,6 +67,8 @@ export class AppComponent implements OnInit {
     console.log("invoke sample: ");
     console.log(this._helper.Collections.invoke([[2, 4, 5]], 'sort'));
 
+    console.log("pluck sample: ");
+    console.log(this._helper.Collections.pluck([{name: "Apple", category: "fruit"}, {name: "Banana", category: "fruit"}, {name: "carrot", category: "vegetable"}], 'name'));
 
     // Arrays 
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"]));
