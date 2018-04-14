@@ -148,4 +148,13 @@ export class CollectionsService {
     }    
   }
 
+  /**
+   * Calls the method named by methodName on each value in the list. 
+   * @param list 
+   * @param methodName 
+   */
+  public invoke(list: Array<any> | object, methodName: string): Array<any> {
+    return _.invoke(list, methodName);
+  }
+
 }
