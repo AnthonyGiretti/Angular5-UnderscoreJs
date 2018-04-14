@@ -157,4 +157,13 @@ export class CollectionsService {
     return _.invoke(list, methodName);
   }
 
+  /**
+   * A convenient version of what is perhaps the most common use-case for map: extracting a list of property values.
+   * @param list 
+   * @param propertyName 
+   */
+  public pluck(list: Array<object>, propertyName: string): Array<any> {
+    return _.pluck(list, propertyName);
+  }
+
 }
