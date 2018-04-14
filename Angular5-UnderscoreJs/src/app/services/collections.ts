@@ -153,7 +153,7 @@ export class CollectionsService {
    * @param list 
    * @param methodName 
    */
-  public invoke(list: Array<any> | object, methodName: string): Array<any> {
+  public invoke(list: Array<any>, methodName: string): Array<any> {
     return _.invoke(list, methodName);
   }
 

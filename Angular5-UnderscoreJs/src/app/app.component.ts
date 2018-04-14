@@ -62,6 +62,12 @@ export class AppComponent implements OnInit {
     console.log("contains sample: " + this._helper.Collections.contains({one: 1, two: 2, three: 3, four: 4}, 3));
     console.log("contains sample: " + this._helper.Collections.contains({one: 1, two: 2, three: 3, four: 4}, 5));
 
+    console.log("invoke sample: ");
+    console.log(this._helper.Collections.invoke([["Grapefruit", "Apple", "Banana"]], 'sort'));
+    console.log("invoke sample: ");
+    console.log(this._helper.Collections.invoke([[2, 4, 5]], 'sort'));
+
+
     // Arrays 
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"]));
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"], 2));
