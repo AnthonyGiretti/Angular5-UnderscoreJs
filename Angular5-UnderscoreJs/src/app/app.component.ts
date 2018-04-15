@@ -80,6 +80,12 @@ export class AppComponent implements OnInit {
     console.log("min sample: ");
     console.log(this._helper.Collections.min([{name: "Apple", category: "fruit", price: 10}, {name: "Banana", category: "fruit", price: 15}, {name: "carrot", category: "vegetable", price: 12}], function(item) { return item.price; }));
 
+    console.log("sortBy sample: ");
+    console.log(this._helper.Collections.sortBy([4, 2, 5], (num) => { return num; }));
+    console.log("sortBy sample: ");
+    console.log(this._helper.Collections.sortBy([{name: "Apple", category: "fruit", price: 10}, {name: "Banana", category: "fruit", price: 15}, {name: "carrot", category: "vegetable", price: 12}], function(item) { return item.price; }));
+
+
     // Arrays 
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"]));
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"], 2));
