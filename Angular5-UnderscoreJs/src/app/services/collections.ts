@@ -208,4 +208,14 @@ export class CollectionsService {
     return _.sortBy(list, delegate).reverse();
   }
 
+  /**
+   * Splits a collection into sets, grouped by the result of running each value through iteratee. 
+   * If iteratee is a string instead of a function, groups by the property named by iteratee on each of the values.
+   * @param list 
+   * @param delegate 
+   */
+  public groupBy(list: Array<any>, delegate: Function | string): object {
+    return _.groupBy(list, delegate);
+  }
+
 }
