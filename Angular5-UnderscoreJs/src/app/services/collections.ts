@@ -228,4 +228,14 @@ export class CollectionsService {
     return _.indexBy(list, delegate);
   }
 
+  /**
+   * Sorts a list into groups and returns a count for the number of objects in each group. 
+   * Similar to groupBy, but instead of returning a list of values, returns a count for the number of values in that group.
+   * @param list 
+   * @param delegate 
+   */
+  public countBy(list: Array<any>, delegate: Function | string): object {
+    return _.countBy(list, delegate);
+  }
+
 }
