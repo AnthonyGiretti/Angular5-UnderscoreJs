@@ -97,7 +97,6 @@ export class AppComponent implements OnInit {
 
     console.log("indexBy sample: ");
     console.log(this._helper.Collections.indexBy([{name: "Apple", category: "fruit", price: 10}, {name: "Banana", category: "fruit", price: 15}, {name: "carrot", category: "vegetable", price: 12}], function(item) { return item.price; }));
-
     console.log("indexBy sample: ");
     console.log(this._helper.Collections.indexBy([{name: "Apple", category: "fruit", price: 10}, {name: "Banana", category: "fruit", price: 15}, {name: "carrot", category: "vegetable", price: 12}], 'price'));
 
