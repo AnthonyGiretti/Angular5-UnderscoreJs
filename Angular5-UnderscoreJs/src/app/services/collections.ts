@@ -218,4 +218,14 @@ export class CollectionsService {
     return _.groupBy(list, delegate);
   }
 
+  /**
+   * Given a list, and an iteratee function that returns a key for each element in the list (or a property name), returns an object with an index of each item. 
+   * Just like groupBy, but for when you know your keys are unique.
+   * @param list 
+   * @param delegate 
+   */
+  public indexBy(list: Array<any>, delegate: Function | string): object {
+    return _.indexBy(list, delegate);
+  }
+
 }

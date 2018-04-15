@@ -95,7 +95,7 @@ export class AppComponent implements OnInit {
     console.log("groupBy sample: ");
     console.log(this._helper.Collections.groupBy([{name: "Apple", category: "fruit", price: 10}, {name: "Banana", category: "fruit", price: 15}, {name: "carrot", category: "vegetable", price: 12}], function(item) { return item.category; }));
 
-
+    
     // Arrays 
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"]));
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"], 2));
