@@ -85,6 +85,10 @@ export class AppComponent implements OnInit {
     console.log("sortBy sample: ");
     console.log(this._helper.Collections.sortBy([{name: "Apple", category: "fruit", price: 10}, {name: "Banana", category: "fruit", price: 15}, {name: "carrot", category: "vegetable", price: 12}], function(item) { return item.price; }));
 
+    console.log("sortByDesc sample: ");
+    console.log(this._helper.Collections.sortByDesc([4, 2, 5], (num) => { return num; }));
+    console.log("sortByDesc sample: ");
+    console.log(this._helper.Collections.sortByDesc([{name: "Apple", category: "fruit", price: 10}, {name: "Banana", category: "fruit", price: 15}, {name: "carrot", category: "vegetable", price: 12}], function(item) { return item.price; }));
 
     // Arrays 
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"]));
