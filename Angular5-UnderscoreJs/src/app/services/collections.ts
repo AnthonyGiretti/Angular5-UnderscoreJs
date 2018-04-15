@@ -166,4 +166,15 @@ export class CollectionsService {
     return _.pluck(list, propertyName);
   }
 
+  /**
+   * Returns the maximum value in list. If an iteratee function is provided, it will be used on each value to generate the criterion by which the value is ranked. 
+   * -Infinity is returned if list is empty, so an isEmpty guard may be required. 
+   * Non-numerical values in list will be ignored.
+   * @param list 
+   * @param delegate 
+   */
+  public max(list: Array<object>, delegate: Function): any {
+    return _.max(list, delegate);
+  }
+
 }
