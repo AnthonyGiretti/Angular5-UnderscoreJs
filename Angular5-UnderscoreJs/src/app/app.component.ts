@@ -70,6 +70,11 @@ export class AppComponent implements OnInit {
     console.log("pluck sample: ");
     console.log(this._helper.Collections.pluck([{name: "Apple", category: "fruit"}, {name: "Banana", category: "fruit"}, {name: "carrot", category: "vegetable"}], 'name'));
 
+    console.log("max sample: ");
+    console.log(this._helper.Collections.max([2, 4, 5], (num) => { return num; }));
+    console.log("max sample: ");
+    console.log(this._helper.Collections.max([{name: "Apple", category: "fruit", price: 10}, {name: "Banana", category: "fruit", price: 15}, {name: "carrot", category: "vegetable", price: 12}], function(item) { return item.price; }));
+
     // Arrays 
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"]));
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"], 2));

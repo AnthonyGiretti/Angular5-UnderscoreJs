@@ -173,7 +173,7 @@ export class CollectionsService {
    * @param list 
    * @param delegate 
    */
-  public max(list: Array<object>, delegate: Function): any {
+  public max(list: Array<any>, delegate: Function): any {
     return _.max(list, delegate);
   }
 
