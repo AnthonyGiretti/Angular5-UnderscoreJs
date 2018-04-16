@@ -100,6 +100,13 @@ export class AppComponent implements OnInit {
     console.log("indexBy sample: ");
     console.log(this._helper.Collections.indexBy([{name: "Apple", category: "fruit", price: 10}, {name: "Banana", category: "fruit", price: 15}, {name: "carrot", category: "vegetable", price: 12}], 'price'));
 
+    console.log("countBy sample: ");
+    console.log(this._helper.Collections.countBy([{name: "Apple", category: "fruit", price: 10}, {name: "Banana", category: "fruit", price: 15}, {name: "carrot", category: "vegetable", price: 12}], function(item) { return item.category; }));
+    console.log("countBy sample: ");
+    console.log(this._helper.Collections.countBy([1, 2, 3, 4, 5], (num) => { return num % 2 == 0 ? 'even': 'odd'; }));
+    console.log("countBy sample: ");
+    console.log(this._helper.Collections.countBy([[1,2,3], [1,2,3,4,5], [1,2,3], [1,2,3,4]], 'length'));
+    
     // Arrays 
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"]));
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"], 2));
