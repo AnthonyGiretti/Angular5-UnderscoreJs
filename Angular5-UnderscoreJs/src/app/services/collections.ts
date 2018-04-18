@@ -252,11 +252,11 @@ export class CollectionsService {
    * @param list 
    * @param count 
    */
-  public random(list: Array<any>, count?: number): Array<any> {
+  public sample(list: Array<any>, count?: number): Array<any> | any {
     if (count != null && count > 0)
-      return _.random(list,count);
+      return _.sample(list,count);
 
-    return _.random(list);
+    return _.sample(list);
   }
 
 }
