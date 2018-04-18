@@ -116,6 +116,8 @@ export class AppComponent implements OnInit {
     console.log("random sample: ");
     console.log(this._helper.Collections.sample([1, 2, 3, 4, 5, 6, 7], 3));
 
+    console.log("toArray sample: ");
+    console.log(this._helper.Collections.toArray({name: "Apple", category: "fruit", price: 10}));
 
     // Arrays 
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"]));
