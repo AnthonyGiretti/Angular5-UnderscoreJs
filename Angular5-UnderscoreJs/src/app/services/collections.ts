@@ -241,9 +241,22 @@ export class CollectionsService {
   /**
    * Returns a shuffled copy of the list, using a version of the Fisher-Yates shuffle.
    * @param list 
-   * @param count 
    */
   public shuffle(list: Array<any>): Array<any> {
       return _.shuffle(list);
   }
+
+  /**
+   * Produce a random sample from the list. Pass a number to return n random elements from the list. 
+   * Otherwise a single random item will be returned.
+   * @param list 
+   * @param count 
+   */
+  public random(list: Array<any>, count?: number): Array<any> {
+    if (count != null && count > 0)
+      return _.random(list,count);
+
+    return _.random(list);
+  }
+
 }
