@@ -259,4 +259,12 @@ export class CollectionsService {
     return _.sample(list);
   }
 
+  /**
+   * Creates a real Array from the list (anything that can be iterated over). Useful for transmuting the arguments object.
+   * @param object 
+   */
+  public toArray(object: object): Array<any> {
+    return _.toArray(object);
+  }
+
 }
