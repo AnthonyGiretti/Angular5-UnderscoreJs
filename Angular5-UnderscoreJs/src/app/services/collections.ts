@@ -238,4 +238,15 @@ export class CollectionsService {
     return _.countBy(list, delegate);
   }
 
+  /**
+   * Returns a shuffled copy of the list, using a version of the Fisher-Yates shuffle.
+   * @param list 
+   * @param count 
+   */
+  public shuffle(list: Array<any>, count?: number): Array<any> {
+    if (count == null)
+      return _.shuffle(list);
+
+    return _.shuffle(list, count);
+  }
 }
