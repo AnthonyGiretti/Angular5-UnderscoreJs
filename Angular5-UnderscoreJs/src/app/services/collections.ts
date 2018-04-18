@@ -267,4 +267,12 @@ export class CollectionsService {
     return _.toArray(object);
   }
 
+  /**
+   * Return the number of values in the list.
+   * @param list 
+   */
+  public size(list: Array<any> | object): number {
+    return _.size(list);
+  }
+
 }
