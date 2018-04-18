@@ -243,10 +243,7 @@ export class CollectionsService {
    * @param list 
    * @param count 
    */
-  public shuffle(list: Array<any>, count?: number): Array<any> {
-    if (count == null)
+  public shuffle(list: Array<any>): Array<any> {
       return _.shuffle(list);
-
-    return _.shuffle(list, count);
   }
 }

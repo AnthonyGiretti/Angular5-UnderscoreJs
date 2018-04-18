@@ -107,6 +107,10 @@ export class AppComponent implements OnInit {
     console.log("countBy sample: ");
     console.log(this._helper.Collections.countBy([[1,2,3], [1,2,3,4,5], [1,2,3], [1,2,3,4]], 'length'));
     
+    console.log("shuffle sample: ");
+    console.log(this._helper.Collections.shuffle([1, 2, 3, 4, 5]));
+
+
     // Arrays 
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"]));
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"], 2));
