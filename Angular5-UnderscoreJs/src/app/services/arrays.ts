@@ -33,4 +33,18 @@ export class ArraysService {
     return _.initial(array, n);
   }
 
+  /**
+   * Returns the last element of an array. 
+   * Passing n will return the last n elements of the array.
+   * @param array 
+   * @param n 
+   */
+  public last(array:Array<any>, n?: number): Array<any> {
+    
+    if (null == n)
+        return _.last(array);
+    
+    return _.last(array, n);
+  }
+
 }
