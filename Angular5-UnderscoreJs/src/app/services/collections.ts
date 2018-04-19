@@ -275,4 +275,13 @@ export class CollectionsService {
     return _.size(list);
   }
 
+  /**
+   * Split array into two arrays: one whose elements all satisfy predicate and one whose elements all do not satisfy predicate.
+   * @param list 
+   * @param delegate 
+   */
+  public partition(list: Array<any>, delegate: Function): Array<Array<any>> {
+    return _.partition(list, delegate)
+  }
+
 }
