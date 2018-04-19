@@ -53,12 +53,20 @@ export class ArraysService {
    * @param array 
    * @param n 
    */
-  public rest(array:Array<any>, index?: number): Array<any> {
-    
+  public rest(array:Array<any>, index?: number): Array<any> { 
     if (null == index)
         return _.rest(array);
     
     return _.rest(array, index);
+  }
+
+  /**
+   * Returns a copy of the array with all falsy values removed. 
+   * In JavaScript, false, null, 0, "", undefined and NaN are all falsy.
+   * @param array 
+   */
+  public compact(array:Array<any>): Array<any> {
+    return _.compact(array);
   }
 
 }
