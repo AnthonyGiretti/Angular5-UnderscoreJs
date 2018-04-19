@@ -39,12 +39,26 @@ export class ArraysService {
    * @param array 
    * @param n 
    */
-  public last(array:Array<any>, n?: number): Array<any> {
+  public last(array:Array<any>, n?: number): any | Array<any> {
     
     if (null == n)
         return _.last(array);
     
     return _.last(array, n);
+  }
+
+  /**
+    Returns the rest of the elements in an array. 
+    Pass an index to return the values of the array from that index onward.
+   * @param array 
+   * @param n 
+   */
+  public rest(array:Array<any>, index?: number): Array<any> {
+    
+    if (null == index)
+        return _.rest(array);
+    
+    return _.rest(array, index);
   }
 
 }
