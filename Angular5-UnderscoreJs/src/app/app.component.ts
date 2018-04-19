@@ -123,6 +123,17 @@ export class AppComponent implements OnInit {
     console.log("size sample: ");
     console.log(this._helper.Collections.size({name: "Apple", category: "fruit", price: 10}));
 
+    console.log("partition sample: ");
+    var isPrimeNumber = (num) => {
+      if (num <= 1) return false;
+      if (num % 2 == 0 && num > 2) return false;
+      let s = Math.sqrt(num);
+      for(let i = 3; i <s; i++)
+          if(num % i === 0) return false;
+      return num !== 1; 
+    }
+    console.log(this._helper.Collections.partition([1, 2, 3, 4, 5, 6, 7], isPrimeNumber));
+
     // Arrays 
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"]));
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"], 2));
