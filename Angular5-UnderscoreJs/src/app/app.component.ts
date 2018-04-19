@@ -153,6 +153,9 @@ export class AppComponent implements OnInit {
     console.log("rest sample: ");
     console.log(this._helper.Arrays.rest([1, 2, 3, 4, 5, 6, 7], 4));
 
+    console.log("compact sample: ");
+    console.log(this._helper.Arrays.compact([1, NaN, 3, 0, 5, false, 7, undefined, "hello", "", null]));
+
   }
 
 }
