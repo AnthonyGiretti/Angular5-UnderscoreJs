@@ -138,6 +138,11 @@ export class AppComponent implements OnInit {
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"]));
     console.log("first sample: " + this._helper.Arrays.first( ["Apple", "Banana", "Grapefruit"], 2));
 
+    console.log("initial sample: ");
+    console.log(this._helper.Arrays.initial([1, 2, 3, 4, 5, 6, 7]));
+    console.log("initial sample: ");
+    console.log(this._helper.Arrays.initial([1, 2, 3, 4, 5, 6, 7], 6));
+
   }
 
 }
