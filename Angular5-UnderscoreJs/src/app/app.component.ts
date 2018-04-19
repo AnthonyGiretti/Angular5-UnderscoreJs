@@ -148,6 +148,11 @@ export class AppComponent implements OnInit {
     console.log("last sample: ");
     console.log(this._helper.Arrays.last([1, 2, 3, 4, 5, 6, 7], 4));
 
+    console.log("rest sample: ");
+    console.log(this._helper.Arrays.rest([1, 2, 3, 4, 5, 6, 7]));
+    console.log("rest sample: ");
+    console.log(this._helper.Arrays.rest([1, 2, 3, 4, 5, 6, 7], 4));
+
   }
 
 }
