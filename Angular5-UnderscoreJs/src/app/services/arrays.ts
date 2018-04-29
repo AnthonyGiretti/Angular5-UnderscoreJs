@@ -77,6 +77,7 @@ export class ArraysService {
   /**
    * Returns a copy of the array with all instances of the values removed.
    * @param array 
+   * @param valuesToRemove 
    */
   public without<T>(array:Array<T>, ...valuesToRemove: Array<T>): Array<T> {
     return _.without(array, ...valuesToRemove);
@@ -84,7 +85,7 @@ export class ArraysService {
 
   /**
    * Computes the union of the passed-in arrays: the list of unique items, in order, that are present in one or more of the arrays.
-   * @param array 
+   * @param arraysToMerge 
    */
   public union<T>(...arraysToMerge: Array<T>): Array<T> {
     return _.union(...arraysToMerge);
@@ -92,10 +93,18 @@ export class ArraysService {
 
   /**
    * Computes the list of values that are the intersection of all the arrays. Each value in the result is present in each of the arrays.
-   * @param array 
+   * @param arraysToIntersect 
    */
   public intersection<T>(...arraysToIntersect: Array<T>): Array<T> {
     return _.intersection(...arraysToIntersect);
   }
 
+  /**
+   * Similar to without, but returns the values from array that are not present in the other arrays.
+   * @param array 
+   * @param otherArrays 
+   */
+  public difference<T>(array:Array<T>, ...otherArrays: Array<T>): Array<T> {
+    return _.difference(array, ...otherArrays);
+  }
 }
