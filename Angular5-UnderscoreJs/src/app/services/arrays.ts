@@ -142,10 +142,23 @@ export class ArraysService {
     return _.unzip(arraysToUnzip);
   }
 
+  /**
+   * Converts arrays into objects. 
+   * Pass either a single list of [key, value] pairs, or a list of keys, and a list of values. 
+   * If duplicate keys exist, the last value wins.
+   * @param arrayOfKeys 
+   * @param arrayOfValues 
+   */
   public object<TKey,TValue>(arrayOfKeys: Array<TKey>, arrayOfValues: Array<TValue>): object {
     return _.object(arrayOfKeys, arrayOfValues);
   }
 
+  /**
+   * Converts arrays into objects. 
+   * Pass either a single list of [key, value] pairs, or a list of keys, and a list of values. 
+   * If duplicate keys exist, the last value wins.
+   * @param arrays 
+   */
   public objectFromArrays(arrays: Array<any>): object {
     return _.object(arrays);
   }
