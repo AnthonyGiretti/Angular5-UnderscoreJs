@@ -75,8 +75,12 @@ export class ArraysService {
    * @param array 
    * @param shallow 
    */
-  public flatten(array:Array<any>, shallow?: number): Array<any> {
-    return _.flatten(array);
+  public flatten(array:Array<any>, shallow?: boolean): Array<any> {
+    
+    if (shallow == null)
+      return _.flatten(array);
+
+      return _.flatten(array,true);
   }
 
 }
