@@ -187,4 +187,15 @@ export class ArraysService {
       return _.lastIndexOf(array, value);
     return _.lastIndexOf(array, value, fromIndex);
   }
+
+  /** 
+   * Uses a binary search to determine the index at which the value should be inserted into the list in order to maintain the list's sorted order. 
+   * If an iteratee function is provided, it will be used to compute the sort ranking of each value, including the value you pass. 
+   * The iteratee may also be the string name of the property to sort by (eg. length).
+  */
+  public sortedIndex<T>(array: Array<T>, value: T, property?: string): number {
+    if (property == null)
+      return _.sortedIndex(array, value);
+    return _.sortedIndex(array, value, property);
+  }
 }
