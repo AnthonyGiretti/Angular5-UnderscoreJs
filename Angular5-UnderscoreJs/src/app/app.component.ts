@@ -201,6 +201,11 @@ export class AppComponent implements OnInit {
     console.log("lastIndexOf sample: ");
     console.log(this._helper.Arrays.lastIndexOf(["Banana", "Orange", "Apple", "Mango"], "Apple"));
 
+    console.log("sortedIndex sample: ");
+    console.log(this._helper.Arrays.sortedIndex([10, 20, 30, 40, 50], 35));
+    console.log("sortedIndex sample: ");
+    console.log(this._helper.Arrays.sortedIndex([{name: 'moe', age: 40}, {name: 'curly', age: 60}], {name: 'larry', age: 50}, 'age'));
+
   }
 
 }
