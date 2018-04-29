@@ -107,4 +107,16 @@ export class ArraysService {
   public difference<T>(array:Array<T>, others: Array<T>): Array<T> {
     return _.difference(array, others);
   }
+
+  /**
+   * Produces a duplicate-free version of the array
+   * Faster if array is already sorted
+   * @param array 
+   * @param alreadySorted
+   */
+  public uniq<T>(array:Array<T>, alreadySorted?: boolean): Array<T> {
+    if (alreadySorted == null)
+      return _.uniq(array);
+    return _.uniq(array, alreadySorted);
+  }
 }
