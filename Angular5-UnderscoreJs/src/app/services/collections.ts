@@ -252,10 +252,9 @@ export class CollectionsService {
    * @param list 
    * @param count 
    */
-  public sample(list: Array<any>, count?: number): Array<any> | any {
+  public sample<T>(list: Array<T>, count?: number): Array<T> | T {
     if (count != null && count > 0)
       return _.sample(list,count);
-
     return _.sample(list);
   }
 
