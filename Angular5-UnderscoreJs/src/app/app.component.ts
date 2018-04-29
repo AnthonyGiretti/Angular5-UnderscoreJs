@@ -173,6 +173,13 @@ export class AppComponent implements OnInit {
     console.log("difference sample: ");
     console.log(this._helper.Arrays.difference([1, 2, 3], [101, 2, 1, 10]));
 
+    console.log("uniq sample: ");
+    console.log(this._helper.Arrays.uniq([1, 2, 1, 4, 1, 3]));
+    console.log("uniq sample: ");
+    console.log(this._helper.Arrays.uniq([1, 2, 1, 4, 1, 3], false));
+    console.log("uniq sample: ");
+    console.log(this._helper.Arrays.uniq([1, 1, 2, 3, 4, 4], true));
+
   }
 
 }
