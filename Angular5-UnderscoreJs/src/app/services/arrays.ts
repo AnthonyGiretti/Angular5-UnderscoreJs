@@ -127,7 +127,7 @@ export class ArraysService {
    * If you're working with a matrix of nested arrays, this can be used to transpose the matrix.
    * @param arraysToZip 
    */
-  public zip(...arraysToZip: Array<any>): Array<Array<any>> {
-    return _.zip(arraysToZip);
+  public zip(...arraysToZip: Array<Array<any>>): Array<Array<any>> {
+    return _.zip(...arraysToZip);
   }
 }

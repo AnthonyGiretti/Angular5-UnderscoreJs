@@ -180,6 +180,9 @@ export class AppComponent implements OnInit {
     console.log("uniq sample: ");
     console.log(this._helper.Arrays.uniq([1, 1, 2, 3, 4, 4], true));
 
+    console.log("zip sample: ");
+    console.log(this._helper.Arrays.zip(['moe', 'larry', 'curly'], [30, 40, 50], [true, false, false]));
+
   }
 
 }
