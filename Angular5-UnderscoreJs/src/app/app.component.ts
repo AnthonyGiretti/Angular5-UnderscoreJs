@@ -196,6 +196,11 @@ export class AppComponent implements OnInit {
     console.log("indexOf sample: ");
     console.log(this._helper.Arrays.indexOf(["Banana", "Orange", "Apple", "Mango"], "Apple"));
 
+    console.log("lastIndexOf sample: ");
+    console.log(this._helper.Arrays.lastIndexOf([1, 2, 3, 4, 5, 6, 7], 2));
+    console.log("lastIndexOf sample: ");
+    console.log(this._helper.Arrays.lastIndexOf(["Banana", "Orange", "Apple", "Mango"], "Apple"));
+
   }
 
 }

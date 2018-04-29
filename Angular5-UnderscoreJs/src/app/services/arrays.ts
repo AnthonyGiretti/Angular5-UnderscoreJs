@@ -169,9 +169,22 @@ export class ArraysService {
    * and you know that the array is already sorted, pass true for isSorted to use a faster binary search 
    * ... or, pass a number as the third argument in order to look for the first matching value in the array after the given index
   */
-  public indexOf<T>(array: Array<T>, value: T, isSorted?: boolean) {
+  public indexOf<T>(array: Array<T>, value: T, isSorted?: boolean): number {
     if (isSorted == null)
       return _.indexOf(array, value);
     return _.indexOf(array, value, isSorted);
+  }
+
+  /**
+   * Returns the index of the last occurrence of value in the array, or -1 if value is not present. 
+   * Pass fromIndex to start your search at a given index.
+   * @param array 
+   * @param value 
+   * @param fromIndex 
+   */
+  public lastIndexOf<T>(array: Array<T>, value: T, fromIndex?: number): number {
+    if (fromIndex == null)
+      return _.lastIndexOf(array, value);
+    return _.lastIndexOf(array, value, fromIndex);
   }
 }
