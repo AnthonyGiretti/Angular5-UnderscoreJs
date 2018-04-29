@@ -164,6 +164,9 @@ export class AppComponent implements OnInit {
     console.log("without sample: ");
     console.log(this._helper.Arrays.without([1, 2, 1, 0, 3, 1, 4], 0, 1));
 
+    console.log("union sample: ");
+    console.log(this._helper.Arrays.union([1, 2, 3], [101, 2, 1, 10], [2, 1]));
+
   }
 
 }
