@@ -130,4 +130,16 @@ export class ArraysService {
   public zip(...arraysToZip: Array<Array<any>>): Array<Array<any>> {
     return _.zip(...arraysToZip);
   }
+
+  /**
+   * The opposite of zip. Given an array of arrays, 
+   * returns a series of new arrays, 
+   * the first of which contains all of the first elements in the input arrays, 
+   * the second of which contains all of the second elements, and so on.
+   * @param arraysToZip 
+   */
+  public unzip(arraysToUnzip: Array<Array<any>>): Array<Array<any>> {
+    return _.unzip(arraysToUnzip);
+  }
+
 }
