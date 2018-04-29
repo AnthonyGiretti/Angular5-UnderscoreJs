@@ -183,6 +183,9 @@ export class AppComponent implements OnInit {
     console.log("zip sample: ");
     console.log(this._helper.Arrays.zip(['moe', 'larry', 'curly'], [30, 40, 50], [true, false, false]));
 
+    console.log("unzip sample: ");
+    console.log(this._helper.Arrays.unzip([["moe", 30, true], ["larry", 40, false], ["curly", 50, false]]));
+
   }
 
 }

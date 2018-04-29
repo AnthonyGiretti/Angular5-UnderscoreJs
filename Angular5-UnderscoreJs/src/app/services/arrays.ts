@@ -142,4 +142,11 @@ export class ArraysService {
     return _.unzip(arraysToUnzip);
   }
 
+  public object<TKey,TValue>(arrayOfKeys: Array<TKey>, arrayOfValues: Array<TValue>): object {
+    return _.object(arrayOfKeys, arrayOfValues);
+  }
+
+  public objectFromArrays(arrays: Array<any>): object {
+    return _.object(arrays);
+  }
 }
