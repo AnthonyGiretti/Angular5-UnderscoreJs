@@ -161,6 +161,9 @@ export class AppComponent implements OnInit {
     console.log("flatten sample: ");
     console.log(this._helper.Arrays.flatten([1, [2], [3, [[4]]]], true));
 
+    console.log("without sample: ");
+    console.log(this._helper.Arrays.without([1, 2, 1, 0, 3, 1, 4], [0, 1]));
+
   }
 
 }
