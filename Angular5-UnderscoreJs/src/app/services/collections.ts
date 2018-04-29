@@ -95,7 +95,7 @@ export class CollectionsService {
    * @param list 
    * @param properties 
    */
-  public findWhere(list: Array<object>, properties: any): any[] {
+  public findWhere<T>(list: Array<T>, properties: object): T[] {
     return _.findWhere(list, properties);
   }
 
@@ -153,7 +153,7 @@ export class CollectionsService {
    * @param list 
    * @param methodName 
    */
-  public invoke(list: Array<any>, methodName: string): Array<any> {
+  public invoke<T>(list: Array<T>, methodName: string): Array<T> {
     return _.invoke(list, methodName);
   }
 
@@ -173,7 +173,7 @@ export class CollectionsService {
    * @param list 
    * @param delegate 
    */
-  public max(list: Array<any>, delegate: Function): any {
+  public max<T>(list: Array<T>, delegate: Function): T {
     return _.max(list, delegate);
   }
 
@@ -184,7 +184,7 @@ export class CollectionsService {
    * @param list 
    * @param delegate 
    */
-  public min(list: Array<any>, delegate: Function): any {
+  public min<T>(list: Array<T>, delegate: Function): T {
     return _.min(list, delegate);
   }
 
