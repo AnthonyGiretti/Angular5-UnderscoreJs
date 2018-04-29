@@ -194,7 +194,7 @@ export class CollectionsService {
    * @param list 
    * @param delegate 
    */
-  public sortBy(list: Array<any>, delegate: Function): Array<any> {
+  public sortBy<T>(list: Array<T>, delegate: Function): Array<T> {
     return _.sortBy(list, delegate);
   }
 
@@ -204,7 +204,7 @@ export class CollectionsService {
    * @param list 
    * @param delegate 
    */
-  public sortByDesc(list: Array<any>, delegate: Function): Array<any> {
+  public sortByDesc<T>(list: Array<T>, delegate: Function): Array<T> {
     return _.sortBy(list, delegate).reverse();
   }
 
