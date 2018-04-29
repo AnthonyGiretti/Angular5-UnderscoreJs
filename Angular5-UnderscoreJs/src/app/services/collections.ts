@@ -85,7 +85,7 @@ export class CollectionsService {
    * @param list 
    * @param properties 
    */
-  public where(list: Array<object>, properties: any): any[] {
+  public where<T>(list: Array<T>, properties: any): T[] {
     return _.where(list, properties);
   }
 
