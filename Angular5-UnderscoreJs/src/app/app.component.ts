@@ -186,6 +186,11 @@ export class AppComponent implements OnInit {
     console.log("unzip sample: ");
     console.log(this._helper.Arrays.unzip([["moe", 30, true], ["larry", 40, false], ["curly", 50, false]]));
 
+    console.log("object sample: ");
+    console.log(this._helper.Arrays.object(['moe', 'larry', 'curly'], [30, 40, 50]));
+    console.log("object sample: ");
+    console.log(this._helper.Arrays.objectFromArrays([['moe', 30], ['larry', 40], ['curly', 50]]));
+
   }
 
 }
