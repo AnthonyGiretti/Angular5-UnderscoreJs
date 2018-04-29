@@ -87,7 +87,7 @@ export class ArraysService {
    * Returns a copy of the array with all instances of the values removed.
    * @param array 
    */
-  public without(array:Array<any>, valuesToRemove: any[]): Array<any> {
+  public without<T>(array:Array<T>, valuesToRemove: Array<T>): Array<T> {
     return _.without(array, ...valuesToRemove);
   }
 
