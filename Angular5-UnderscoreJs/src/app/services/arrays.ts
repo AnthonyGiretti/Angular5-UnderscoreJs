@@ -83,4 +83,12 @@ export class ArraysService {
       return _.flatten(array,true);
   }
 
+  /**
+   * Returns a copy of the array with all instances of the values removed.
+   * @param array 
+   */
+  public without(array:Array<any>, valuesToRemove: any[]): Array<any> {
+    return _.without(array, ...valuesToRemove);
+  }
+
 }
