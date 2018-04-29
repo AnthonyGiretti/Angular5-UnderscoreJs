@@ -169,7 +169,7 @@ export class ArraysService {
    * and you know that the array is already sorted, pass true for isSorted to use a faster binary search 
    * ... or, pass a number as the third argument in order to look for the first matching value in the array after the given index
   */
-  public indexOf<T>(array: Array<T>, value: number, isSorted?: boolean) {
+  public indexOf<T>(array: Array<T>, value: T, isSorted?: boolean) {
     if (isSorted == null)
       return _.indexOf(array, value);
     return _.indexOf(array, value, isSorted);
