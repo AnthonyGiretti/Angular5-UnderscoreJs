@@ -100,11 +100,11 @@ export class ArraysService {
   }
 
   /**
-   * Similar to without, but returns the values from array that are not present in the other arrays.
+   * Similar to without, but returns the values from array that are not present in the other array.
    * @param array 
-   * @param otherArrays 
+   * @param others
    */
-  public difference<T>(array:Array<T>, ...otherArrays: Array<T>): Array<T> {
-    return _.difference(array, ...otherArrays);
+  public difference<T>(array:Array<T>, others: Array<T>): Array<T> {
+    return _.difference(array, others);
   }
 }

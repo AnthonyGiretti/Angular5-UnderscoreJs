@@ -170,6 +170,9 @@ export class AppComponent implements OnInit {
     console.log("intersection sample: ");
     console.log(this._helper.Arrays.intersection([1, 2, 3], [101, 2, 1, 10], [2, 1]));
 
+    console.log("difference sample: ");
+    console.log(this._helper.Arrays.difference([1, 2, 3], [101, 2, 1, 10]));
+
   }
 
 }
