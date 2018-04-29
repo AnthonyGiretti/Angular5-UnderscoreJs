@@ -90,4 +90,12 @@ export class ArraysService {
     return _.union(...arraysToMerge);
   }
 
+  /**
+   * Computes the list of values that are the intersection of all the arrays. Each value in the result is present in each of the arrays.
+   * @param array 
+   */
+  public intersection<T>(...arraysToIntersect: Array<T>): Array<T> {
+    return _.intersection(...arraysToIntersect);
+  }
+
 }
