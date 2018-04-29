@@ -65,7 +65,7 @@ export class ArraysService {
    * In JavaScript, false, null, 0, "", undefined and NaN are all falsy.
    * @param array 
    */
-  public compact(array:Array<any>): Array<any> {
+  public compact<T>(array:Array<T>): Array<T> {
     return _.compact(array);
   }
 
@@ -76,7 +76,6 @@ export class ArraysService {
    * @param shallow 
    */
   public flatten<T>(array:Array<T>, shallow?: boolean): Array<T> {
-    
     if (shallow == null)
       return _.flatten(array);
 
