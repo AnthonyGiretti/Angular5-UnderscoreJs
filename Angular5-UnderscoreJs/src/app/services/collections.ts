@@ -280,7 +280,7 @@ export class CollectionsService {
    * @param list 
    * @param delegate 
    */
-  public partition(list: Array<any>, delegate: Function): Array<Array<any>> {
+  public partition<T>(list: Array<T>, delegate: Function): Array<Array<T>> {
     return _.partition(list, delegate)
   }
 
