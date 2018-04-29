@@ -11,11 +11,9 @@ export class ArraysService {
    * @param array 
    * @param n 
    */
-  public first(array:Array<any>, n?: number): any | Array<any> {
-    
+  public first<T>(array:Array<T>, n?: number): T | Array<T> {  
     if (null == n)
-        return _.first(array);
-    
+        return _.first(array);  
     return _.first(array, n);
   }
 
@@ -25,11 +23,9 @@ export class ArraysService {
    * @param array 
    * @param n 
    */
-  public initial(array:Array<any>, n?: number): Array<any> {
-    
+  public initial<T>(array:Array<T>, n?: number): Array<T> {
     if (null == n)
-        return _.initial(array);
-    
+        return _.initial(array);   
     return _.initial(array, n);
   }
 
@@ -39,11 +35,9 @@ export class ArraysService {
    * @param array 
    * @param n 
    */
-  public last(array:Array<any>, n?: number): any | Array<any> {
-    
+  public last<T>(array:Array<T>, n?: number): T | Array<T> {
     if (null == n)
         return _.last(array);
-    
     return _.last(array, n);
   }
 
@@ -55,8 +49,7 @@ export class ArraysService {
    */
   public rest<T>(array:Array<T>, index?: number): Array<T> { 
     if (null == index)
-        return _.rest(array);
-    
+        return _.rest(array);   
     return _.rest(array, index);
   }
 
@@ -78,8 +71,7 @@ export class ArraysService {
   public flatten<T>(array:Array<T>, shallow?: boolean): Array<T> {
     if (shallow == null)
       return _.flatten(array);
-
-      return _.flatten(array,true);
+    return _.flatten(array,true);
   }
 
   /**
