@@ -53,7 +53,7 @@ export class ArraysService {
    * @param array 
    * @param n 
    */
-  public rest(array:Array<any>, index?: number): Array<any> { 
+  public rest<T>(array:Array<T>, index?: number): Array<T> { 
     if (null == index)
         return _.rest(array);
     
