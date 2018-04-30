@@ -198,4 +198,11 @@ export class ArraysService {
       return _.sortedIndex(array, value);
     return _.sortedIndex(array, value, property);
   }
+
+  /**
+   * Similar to _.indexOf, returns the first index where the predicate truth test passes; otherwise returns -1.
+   */
+  public findIndex<T>(array: Array<T>, func: Function): number {
+    return _.findIndex(array, func);
+  }
 }
