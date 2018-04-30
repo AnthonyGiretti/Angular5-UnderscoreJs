@@ -212,4 +212,19 @@ export class ArraysService {
   public findLastIndex<T>(array: Array<T>, predicate: Function | object): number {
     return _.findLastIndex(array, predicate);
   }
+
+  /**
+   * A function to create flexibly-numbered lists of integers, handy for each and map loops. 
+   * start, if omitted, defaults to 0; step defaults to 1. 
+   * Returns a list of integers from start (inclusive) to stop (exclusive), incremented (or decremented) by step, exclusive. 
+   * Note that ranges that stop before they start are considered to be zero-length instead of negative — if you'd like a negative range, use a negative step.
+   * @param stop 
+   * @param start 
+   * @param step 
+   */
+  public range(stop: number, start?: number, step?: number): Array<number> {
+    start = null == start ? 0 : start;
+    step = null == step ? 0 : step;
+    return _.range(start, stop, step);
+  }
 }

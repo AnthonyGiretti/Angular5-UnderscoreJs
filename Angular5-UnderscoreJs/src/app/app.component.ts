@@ -216,7 +216,16 @@ export class AppComponent implements OnInit {
     console.log("findLastIndex sample: ");
     console.log(this._helper.Arrays.findLastIndex([{name: 'moe', age: 40}, {name: 'curly', age: 60}, {name: 'larry', age: 50}, {name: 'moe', age: 40}], {name: 'moe'}));
 
-
+    console.log("range sample: ");
+    console.log(this._helper.Arrays.range(10));
+    console.log("range sample: ");
+    console.log(this._helper.Arrays.range(11, 1));
+    console.log("range sample: ");
+    console.log(this._helper.Arrays.range(30, 0, 5));
+    console.log("range sample: ");
+    console.log(this._helper.Arrays.range(-10, 0, -1));
+    console.log("range sample: ");
+    console.log(this._helper.Arrays.range(0));
   }
 
 }
