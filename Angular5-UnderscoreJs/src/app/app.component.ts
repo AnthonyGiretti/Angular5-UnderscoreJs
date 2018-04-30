@@ -207,9 +207,15 @@ export class AppComponent implements OnInit {
     console.log(this._helper.Arrays.sortedIndex([{name: 'moe', age: 40}, {name: 'curly', age: 60}], {name: 'larry', age: 50}, 'age'));
 
     console.log("findIndex sample: ");
-    console.log(this._helper.Arrays.findIndex([1, 2, 3, 4, 5, 6, 7], isPrimeNumber));
+    console.log(this._helper.Arrays.findIndex([1, 2, 3, 4, 5, 6, 7, 1], isPrimeNumber));
     console.log("findIndex sample: ");
-    console.log(this._helper.Arrays.findIndex([{name: 'moe', age: 40}, {name: 'curly', age: 60}, {name: 'larry', age: 50}], {name: 'larry'}));
+    console.log(this._helper.Arrays.findIndex([{name: 'moe', age: 40}, {name: 'curly', age: 60}, {name: 'larry', age: 50}, {name: 'moe', age: 40}], {name: 'moe'}));
+
+    console.log("findLastIndex sample: ");
+    console.log(this._helper.Arrays.findLastIndex([1, 2, 3, 4, 5, 6, 7, 1], isPrimeNumber));
+    console.log("findLastIndex sample: ");
+    console.log(this._helper.Arrays.findLastIndex([{name: 'moe', age: 40}, {name: 'curly', age: 60}, {name: 'larry', age: 50}, {name: 'moe', age: 40}], {name: 'moe'}));
+
 
   }
 

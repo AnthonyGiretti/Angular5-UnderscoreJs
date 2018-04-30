@@ -205,4 +205,11 @@ export class ArraysService {
   public findIndex<T>(array: Array<T>, predicate: Function | object): number {
     return _.findIndex(array, predicate);
   }
+
+  /**
+   * Like _.findIndex but iterates the array in reverse, returning the index closest to the end where the predicate truth test passes.
+   */
+  public findLastIndex<T>(array: Array<T>, predicate: Function | object): number {
+    return _.findLastIndex(array, predicate);
+  }
 }
