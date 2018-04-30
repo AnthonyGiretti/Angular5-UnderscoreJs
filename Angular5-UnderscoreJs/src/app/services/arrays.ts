@@ -202,7 +202,7 @@ export class ArraysService {
   /**
    * Similar to _.indexOf, returns the first index where the predicate truth test passes; otherwise returns -1.
    */
-  public findIndex<T>(array: Array<T>, func: Function): number {
-    return _.findIndex(array, func);
+  public findIndex<T>(array: Array<T>, predicate: Function | object): number {
+    return _.findIndex(array, predicate);
   }
 }

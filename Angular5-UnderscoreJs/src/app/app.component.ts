@@ -206,6 +206,11 @@ export class AppComponent implements OnInit {
     console.log("sortedIndex sample: ");
     console.log(this._helper.Arrays.sortedIndex([{name: 'moe', age: 40}, {name: 'curly', age: 60}], {name: 'larry', age: 50}, 'age'));
 
+    console.log("findIndex sample: ");
+    console.log(this._helper.Arrays.findIndex([1, 2, 3, 4, 5, 6, 7], isPrimeNumber));
+    console.log("findIndex sample: ");
+    console.log(this._helper.Arrays.findIndex([{name: 'moe', age: 40}, {name: 'curly', age: 60}, {name: 'larry', age: 50}], {name: 'larry'}));
+
   }
 
 }
