@@ -18,4 +18,14 @@ export class FunctionsService {
     return _.bind(delegate, data, ...parameters);
   }
 
+  /**
+   * Partially apply a function by filling in any number of its arguments, without changing its dynamic this value. 
+   * A close cousin of bind. 
+   * @param delegate 
+   * @param parameters 
+   */
+  public partial(delegate: Function, ...parameters: Array<any>): Function {
+    return _.bind(delegate, ...parameters);
+  }
+
 }
