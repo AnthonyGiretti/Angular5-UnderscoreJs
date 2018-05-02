@@ -25,7 +25,7 @@ export class FunctionsService {
    * @param parameters 
    */
   public partial(delegate: Function, ...parameters: Array<any>): Function {
-    return _.bind(delegate, ...parameters);
+    return _.partial(delegate, ...parameters);
   }
 
 }

@@ -232,6 +232,15 @@ export class AppComponent implements OnInit {
     var func = function (firstname, lastname) { console.log(`${this.prefix} ! My name is ${firstname} ${lastname}. ${this.suffix}`) };
     var myFunc = this._helper.Functions.bind(func, {prefix: " Hello world", suffix: ":)"}, "Anthony", "Giretti");
     myFunc();
+
+    console.log("partial sample: ");
+    var subtract = function(a, b) { console.log(b - a); };
+    var sub5 = this._helper.Functions.partial(subtract, 5);
+    sub5(20);
+    console.log("partial sample: ");
+    var bigoperation = function(a, b, c, d) { console.log(a * b + c * d); };
+    var bigoperation5 = this._helper.Functions.partial(bigoperation, 5, 5);
+    bigoperation5(10, 2);
   }
 
 }
