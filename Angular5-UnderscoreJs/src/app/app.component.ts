@@ -226,6 +226,12 @@ export class AppComponent implements OnInit {
     console.log(this._helper.Arrays.range(-10, 0, -1));
     console.log("range sample: ");
     console.log(this._helper.Arrays.range(0));
+
+    // Function
+    console.log("bind sample: ");
+    var func = function (firstname, lastname) { console.log(`${this.prefix} ! My name is ${firstname} ${lastname}. ${this.suffix}`) };
+    var myFunc = this._helper.Functions.bind(func, {prefix: " Hello world", suffix: ":)"}, "Anthony", "Giretti");
+    myFunc();
   }
 
 }
