@@ -93,7 +93,7 @@ export class AppComponent implements OnInit {
     console.log("groupBy sample: ");
     console.log(this._helper.Collections.groupBy([4.5, 2.6, 4.3], (num) => { return Math.ceil(num); }));
     console.log("groupBy sample: ");
-    console.log(this._helper.Collections.groupBy([{name: "Apple", category: "fruit", price: 10}, {name: "Banana", category: "fruit", price: 15}, {name: "carrot", category: "vegetable", price: 12}], function(item) { return item.category; }));
+    console.log(this._helper.Collections.groupBy([{name: "Apple", category: "fruit", price: 10}, {name: "Banana", category: 'fruit', price: 15}, {name: "carrot", category: "vegetable", price: 12}], function(item) { return item.category; }));
 
     console.log("indexBy sample: ");
     console.log(this._helper.Collections.indexBy([{name: "Apple", category: "fruit", price: 10}, {name: "Banana", category: "fruit", price: 15}, {name: "carrot", category: "vegetable", price: 12}], function(item) { return item.price; }));
@@ -103,7 +103,7 @@ export class AppComponent implements OnInit {
     console.log("countBy sample: ");
     console.log(this._helper.Collections.countBy([{name: "Apple", category: "fruit", price: 10}, {name: "Banana", category: "fruit", price: 15}, {name: "carrot", category: "vegetable", price: 12}], function(item) { return item.category; }));
     console.log("countBy sample: ");
-    console.log(this._helper.Collections.countBy([1, 2, 3, 4, 5], (num) => { return num % 2 == 0 ? 'even': 'odd'; }));
+    console.log(this._helper.Collections.countBy([1, 2, 3, 4, 5], (num) => num % 2 == 0 ? 'even': 'odd'));
     console.log("countBy sample: ");
     console.log(this._helper.Collections.countBy([[1,2,3], [1,2,3,4,5], [1,2,3], [1,2,3,4]], 'length'));
     
@@ -241,6 +241,10 @@ export class AppComponent implements OnInit {
     var bigoperation = function(a, b, c, d) { console.log(a * b + c * d); };
     var bigoperation5 = this._helper.Functions.partial(bigoperation, 5, 5);
     bigoperation5(10, 2);
+
+    console.log("delay sample: ");
+    this._helper.Functions.delay(console.log, 1000, "Hello", "world");
+
   }
 
 }
