@@ -324,6 +324,9 @@ export class AppComponent implements OnInit {
     var newNumbers = this._helper.Objects.create(Numbers.prototype, {four: 4});
     console.log(newNumbers);
 
+    console.log("functions sample: ");
+    console.log(this._helper.Objects.functions(this._helper.Objects));
+
   }
 
 }
