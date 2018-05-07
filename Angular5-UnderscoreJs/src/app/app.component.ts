@@ -315,7 +315,14 @@ export class AppComponent implements OnInit {
     console.log("invert sample: ");
     console.log(this._helper.Objects.invert({one: 1, two: "2", three: 3}));
 
-    
+    console.log("create sample: ");
+    var Numbers = function() {
+      this.one = 1;
+      this.two = 2;
+      this.three = 3
+    }
+    var newNumbers = this._helper.Objects.create(Numbers.prototype, {four: 4});
+    console.log(newNumbers);
 
   }
 
