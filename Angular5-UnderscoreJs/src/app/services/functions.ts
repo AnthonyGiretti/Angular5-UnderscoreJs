@@ -110,4 +110,14 @@ export class FunctionsService {
     return _.before(count, delegate);
   }
 
+  /**
+   * Wraps the first function inside of the wrapper function, passing it as the first argument. 
+   * This allows the wrapper to execute code before and after the function runs, adjust the arguments, and execute it conditionally.
+   * @param delegate 
+   * @param wrapper 
+   */
+  public wrap(delegate: Function, wrapper: Function): Function {
+    return _.wrap(delegate, wrapper);
+  }
+
 }
