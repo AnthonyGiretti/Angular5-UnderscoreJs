@@ -289,6 +289,10 @@ export class AppComponent implements OnInit {
     });
     
     raceResults("Dopey", "Grumpy", "Happy", "Sneezy", "Bashful", "Sleepy", "Doc");
+
+    // Objects
+    console.log("keys sample: ");
+    console.log(this._helper.Objects.keys({one: 1, two: 2, three: 3}));
   }
 
 }
