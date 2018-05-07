@@ -315,6 +315,8 @@ export class AppComponent implements OnInit {
     console.log("invert sample: ");
     console.log(this._helper.Objects.invert({one: 1, two: "2", three: 3}));
 
+    
+
   }
 
 }

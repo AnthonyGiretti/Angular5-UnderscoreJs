@@ -54,4 +54,14 @@ export class ObjectsService {
   public invert(object: Object): Object {
     return _.invert(object);
   }
+
+  /**
+   * Creates a new object with the given prototype, optionally attaching props as own properties. 
+   * Basically, Object.create, but without all of the property descriptor jazz.
+   * @param prototype 
+   * @param properties 
+   */
+  public create(prototype: any, properties: Object) {
+    return _.create(prototype, properties);
+  }
 }
