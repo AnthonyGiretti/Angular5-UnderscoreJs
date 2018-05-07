@@ -120,8 +120,21 @@ export class FunctionsService {
     return _.wrap(delegate, wrapper);
   }
 
+  /**
+   * Returns a new negated version of the predicate function.
+   * @param delegate 
+   */
   public negate(delegate: Function): Function {
     return _.negate(delegate);
   }
 
+  /**
+   * Returns the composition of a list of functions, where each function consumes the return value of the function that follows. 
+   * In math terms, composing the functions f(), g(), and h() produces f(g(h())).
+   * @param delegates 
+   */
+  public compose(...delegates: Array<Function>): Function {
+    return _.compose(...delegates);
+  }
+    
 }
