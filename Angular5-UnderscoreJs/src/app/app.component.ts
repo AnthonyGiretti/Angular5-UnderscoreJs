@@ -267,6 +267,15 @@ export class AppComponent implements OnInit {
     beforeFunction();
     beforeFunction();
     beforeFunction(); // is not fired
+
+    console.log("wrap sample");
+    var hello = function(name) { return "hello: " + name; };
+    var helloWrapped = this._helper.Functions.wrap(hello, (func) => {
+      console.log("before, " + func("Anthony") + ", after");
+    });
+    helloWrapped();
+
+
   }
 
 }
