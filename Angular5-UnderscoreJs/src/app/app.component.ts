@@ -303,6 +303,9 @@ export class AppComponent implements OnInit {
     Numbers.prototype.four = 4;
     console.log(this._helper.Objects.allKeys(new Numbers()));
 
+    console.log("values sample: ");
+    console.log(this._helper.Objects.values({one: 1, two: "2", three: 3}));
+
   }
 
 }
