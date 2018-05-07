@@ -327,6 +327,13 @@ export class AppComponent implements OnInit {
     console.log("functions sample: ");
     console.log(this._helper.Objects.functions(this._helper.Objects));
 
+    console.log("findKey sample: ");
+    var Person = function() {
+      this.FirstName = "Anthony";
+      this.City = "Montréal";
+      this.Country = "Canada"
+    }
+    console.log(this._helper.Objects.findKey(new Person(), (prop) => { console.log(prop.toLowerCase()); return prop.toLowerCase().indexOf("name") > 0 }));
   }
 
 }
