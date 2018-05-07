@@ -72,4 +72,15 @@ export class ObjectsService {
   public functions(object: Object): Array<String> {
     return _.functions(object);
   }
+
+  /**
+   * Similar to _.findIndex but for keys in objects. 
+   * Returns the key where the predicate truth test passes or undefined. 
+   * predicate is transformed through iteratee to facilitate shorthand syntaxes.
+   * @param object 
+   * @param delegate 
+   */
+  public findKey(object: Object, delegate: Function): String {
+    return _.findKey(object, delegate);
+  }
 }
