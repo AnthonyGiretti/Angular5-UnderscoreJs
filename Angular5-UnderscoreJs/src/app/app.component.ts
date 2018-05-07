@@ -279,6 +279,9 @@ export class AppComponent implements OnInit {
     var isFalsy = this._helper.Functions.negate(Boolean);
     console.log(this._helper.Collections.find([-2, -1, 0, 1, 2], isFalsy));
 
+    console.log("compose sample");
+    var composed = this._helper.Functions.compose((name) => {return "Hello " + name}, (statement) => {return statement + " !"});
+    console.log(composed("Anthony"));
   }
 
 }
