@@ -64,4 +64,12 @@ export class ObjectsService {
   public create(prototype: any, properties: Object) {
     return _.create(prototype, properties);
   }
+
+  /**
+   * Returns a sorted list of the names of every method in an object — that is to say, the name of every function property of the object.
+   * @param object 
+   */
+  public functions(object: Object): Array<String> {
+    return _.functions(object);
+  }
 }
