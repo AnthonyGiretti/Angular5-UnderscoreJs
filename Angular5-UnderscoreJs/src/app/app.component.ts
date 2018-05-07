@@ -248,6 +248,12 @@ export class AppComponent implements OnInit {
     console.log("defer sample: ");
     this._helper.Functions.defer(console.log, "Hello", "world");
 
+    console.log("once sample");
+    var once = ()=> {console.log("called once with once function");}
+    var onceToExcec = this._helper.Functions.once(once);
+    onceToExcec();
+    onceToExcec();
+
   }
 
 }
