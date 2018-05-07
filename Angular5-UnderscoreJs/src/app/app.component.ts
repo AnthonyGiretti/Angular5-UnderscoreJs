@@ -283,7 +283,12 @@ export class AppComponent implements OnInit {
     var composed = this._helper.Functions.compose((name) => {return "Hello " + name}, (statement) => {return statement + " !"});
     console.log(composed("Anthony"));
 
-   
+    console.log("restArguments sample");
+    var raceResults = this._helper.Functions.restArguments((gold, silver, bronze, everyoneElse) => {
+      this._helper.Collections.each(everyoneElse, (name) => {console.log("you loose " + name)});
+    });
+    
+    raceResults("Dopey", "Grumpy", "Happy", "Sneezy", "Bashful", "Sleepy", "Doc");
   }
 
 }
