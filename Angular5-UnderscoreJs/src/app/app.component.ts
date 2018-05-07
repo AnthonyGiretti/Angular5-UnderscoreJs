@@ -309,7 +309,8 @@ export class AppComponent implements OnInit {
     console.log("mapObject sample: ");
     console.log(this._helper.Objects.mapObject({one: 1, two: 2, three: 3}, (prop) => {return prop * 2 + 1}));
 
-
+    console.log("pairs sample: ");
+    console.log(this._helper.Objects.pairs({one: 1, two: "2", three: 3}));
 
   }
 
