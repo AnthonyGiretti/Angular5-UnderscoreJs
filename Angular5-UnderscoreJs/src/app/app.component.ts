@@ -245,6 +245,9 @@ export class AppComponent implements OnInit {
     console.log("delay sample: ");
     this._helper.Functions.delay(console.log, 1000, "Hello", "world");
 
+    console.log("defer sample: ");
+    this._helper.Functions.defer(console.log, "Hello", "world");
+
   }
 
 }
