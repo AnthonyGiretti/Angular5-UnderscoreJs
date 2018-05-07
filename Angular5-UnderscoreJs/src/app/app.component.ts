@@ -333,7 +333,7 @@ export class AppComponent implements OnInit {
       this.City = "Montréal";
       this.Country = "Canada"
     }
-    console.log(this._helper.Objects.findKey(new Person(), (prop) => { console.log(prop.toLowerCase()); return prop.toLowerCase().indexOf("name") > 0 }));
+    console.log(this._helper.Objects.findKey(new Person(), (prop) => { return prop.toLowerCase() == "canada"}));
   }
 
 }

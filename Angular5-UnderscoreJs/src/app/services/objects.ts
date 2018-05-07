@@ -74,7 +74,7 @@ export class ObjectsService {
   }
 
   /**
-   * Similar to _.findIndex but for keys in objects. 
+   * Similar to _.findIndex but for properties in objects. 
    * Returns the key where the predicate truth test passes or undefined. 
    * predicate is transformed through iteratee to facilitate shorthand syntaxes.
    * @param object 

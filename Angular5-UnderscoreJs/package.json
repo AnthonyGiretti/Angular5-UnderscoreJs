@@ -24,7 +24,7 @@
     "core-js": "^2.4.1",
     "rxjs": "^5.5.2",
     "zone.js": "^0.8.14",
-    "underscore": "^1.8.3"
+    "underscore": "^1.9.0"
   },
   "devDependencies": {
     "@angular-devkit/core": "^0.4.6",
