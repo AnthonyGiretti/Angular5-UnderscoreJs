@@ -254,6 +254,14 @@ export class AppComponent implements OnInit {
     onceToExcec();
     onceToExcec();
 
+    console.log("after sample");
+    var arrayOfFruits = ["Apple", "Banana", "Grapefruit"]
+    var renderFruits = this._helper.Functions.after(arrayOfFruits.length, () => {console.log("These are all fruits I love !");});
+    this._helper.Collections.each(arrayOfFruits, function(fruit) {
+      console.log(fruit);
+      renderFruits();// is run once, after all notes have saved.
+    });
+
   }
 
 }
