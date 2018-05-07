@@ -306,6 +306,9 @@ export class AppComponent implements OnInit {
     console.log("values sample: ");
     console.log(this._helper.Objects.values({one: 1, two: "2", three: 3}));
 
+    console.log("mapObject sample: ");
+    console.log(this._helper.Objects.mapObject({one: 1, two: 2, three: 3}, (prop) => {return prop * 2 + 1}));
+
   }
 
 }
