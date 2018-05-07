@@ -99,4 +99,15 @@ export class FunctionsService {
   public after(count: number, delegate: Function) : Function {
     return _.after(count, delegate);
   }
+
+  /**
+   * Creates a version of the function that can be called no more than count times. 
+   * The result of the last function call is memoized and returned when count has been reached.
+   * @param count 
+   * @param delegate 
+   */
+  public before(count: number, delegate: Function) : Function {
+    return _.before(count, delegate);
+  }
+
 }
