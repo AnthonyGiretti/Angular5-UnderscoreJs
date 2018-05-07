@@ -262,6 +262,11 @@ export class AppComponent implements OnInit {
       renderFruits();// is run once, after all notes have saved.
     });
 
+    console.log("before sample");
+    var beforeFunction = this._helper.Functions.before(3, () => {console.log("beforeFunction is fired no more than 3 (2)");});
+    beforeFunction();
+    beforeFunction();
+    beforeFunction(); // is not fired
   }
 
 }
