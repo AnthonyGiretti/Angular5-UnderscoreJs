@@ -275,6 +275,9 @@ export class AppComponent implements OnInit {
     });
     helloWrapped();
 
+    console.log("negate sample");
+    var isFalsy = this._helper.Functions.negate(Boolean);
+    console.log(this._helper.Collections.find([-2, -1, 0, 1, 2], isFalsy));
   }
 
 }
