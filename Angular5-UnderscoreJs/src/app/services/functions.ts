@@ -120,4 +120,8 @@ export class FunctionsService {
     return _.wrap(delegate, wrapper);
   }
 
+  public negate(delegate: Function): Function {
+    return _.negate(delegate);
+  }
+
 }

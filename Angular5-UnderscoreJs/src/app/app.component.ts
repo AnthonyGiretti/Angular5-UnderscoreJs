@@ -275,7 +275,6 @@ export class AppComponent implements OnInit {
     });
     helloWrapped();
 
-
   }
 
 }
