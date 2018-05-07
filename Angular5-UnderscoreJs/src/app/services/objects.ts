@@ -36,4 +36,13 @@ export class ObjectsService {
   public mapObject(object: Object, delegate: Function): Object {
     return _.mapObject(object, delegate);
   }
+
+  /**
+   * Convert an object into a list of [key, value] pairs. 
+   * The opposite of object.
+   * @param object 
+   */
+  public pairs(object: Object): Array<Array<any>> {
+    return _.pairs(object);
+  }
 }
