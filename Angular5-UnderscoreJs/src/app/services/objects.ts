@@ -20,4 +20,11 @@ export class ObjectsService {
     return _.allKeys(object);
   }
 
+  /**
+   * Return all of the values of the object's own properties.
+   * @param object 
+   */
+  public values(object: Object): Array<any> {
+    return _.values(object);
+  }
 }
