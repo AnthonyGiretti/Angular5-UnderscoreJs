@@ -136,5 +136,14 @@ export class FunctionsService {
   public compose(...delegates: Array<Function>): Function {
     return _.compose(...delegates);
   }
+
+  /** 
+   * Returns a version of the function that, when called, receives all arguments from and beyond startIndex collected into a single array. 
+   * If you don’t pass an explicit startIndex, it will be determined by looking at the number of arguments to the function itself. 
+   * Similar to ES6’s rest parameters syntax.
+  */
+  public restArguments(delegate: Function, startIndex?: number): Function {
+    return (startIndex == null) ? _.restArguments(delegate) : _.restArguments(delegate, startIndex);
+  }
     
 }

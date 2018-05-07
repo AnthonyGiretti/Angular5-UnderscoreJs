@@ -282,6 +282,8 @@ export class AppComponent implements OnInit {
     console.log("compose sample");
     var composed = this._helper.Functions.compose((name) => {return "Hello " + name}, (statement) => {return statement + " !"});
     console.log(composed("Anthony"));
+
+   
   }
 
 }
