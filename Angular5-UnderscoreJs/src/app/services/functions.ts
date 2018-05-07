@@ -39,4 +39,14 @@ export class FunctionsService {
     _.delay(delegate, wait, ...parameters);
   }
 
+  /**
+   * Defers invoking the function until the current call stack has cleared, similar to using setTimeout with a delay of 0.
+   * Useful for performing expensive computations or HTML rendering in chunks without blocking the UI thread from updating.
+   * If you pass the optional arguments, they will be forwarded on to the function when it is invoked.
+   * @param delegate
+   * @param parameters
+   */
+  public defer(delegate: Function, ...parameters: Array<any>): void {
+    _.defer(delegate, ...parameters);
+  }
 }
