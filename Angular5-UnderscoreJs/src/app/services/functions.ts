@@ -91,4 +91,12 @@ export class FunctionsService {
   public once(delegate: Function): Function {
     return _.once(delegate);
   }
+
+  /**
+   * Creates a version of the function that will only be run after being called count times. 
+   * Useful for grouping asynchronous responses, where you want to be sure that all the async calls have finished, before proceeding.
+   */
+  public after(count: number, delegate: Function) : Function {
+    return _.after(count, delegate);
+  }
 }
