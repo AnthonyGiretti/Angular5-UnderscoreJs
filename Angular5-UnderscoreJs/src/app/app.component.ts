@@ -312,6 +312,8 @@ export class AppComponent implements OnInit {
     console.log("pairs sample: ");
     console.log(this._helper.Objects.pairs({one: 1, two: "2", three: 3}));
 
+
+
   }
 
 }

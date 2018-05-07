@@ -45,4 +45,13 @@ export class ObjectsService {
   public pairs(object: Object): Array<Array<any>> {
     return _.pairs(object);
   }
+
+  /**
+   * Returns a copy of the object where the keys have become the values and the values the keys. 
+   * For this to work, all of your object's values should be unique and string serializable.
+   * @param object 
+   */
+  public invert(object: Object): Object {
+    return _.invert(object);
+  }
 }
