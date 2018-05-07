@@ -27,4 +27,13 @@ export class ObjectsService {
   public values(object: Object): Array<any> {
     return _.values(object);
   }
+
+  /**
+   * Like map, but for objects. Transform the value of each property in turn.
+   * @param object 
+   * @param delegate 
+   */
+  public mapObject(object: Object, delegate: Function): Object {
+    return _.mapObject(object, delegate);
+  }
 }
