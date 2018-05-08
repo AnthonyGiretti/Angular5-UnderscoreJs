@@ -337,6 +337,9 @@ export class AppComponent implements OnInit {
 
     console.log("extend sample: ");
     console.log(this._helper.Objects.extend({name: "Anthony"}, {city: "Montréal"}, {country: "Canada"}));
+
+    console.log("extendOwn sample: ");
+    console.log(this._helper.Objects.extendOwn({name: "Anthony"}, {city: "Montréal"}, {country: "Canada"}));
   }
 
 }
