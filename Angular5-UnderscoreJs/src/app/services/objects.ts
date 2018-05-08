@@ -95,5 +95,13 @@ export class ObjectsService {
     return _.extend(destination, ...sources);
   }
 
-  
+  /**
+   * Like extend, but only copies own properties over to the destination object.
+   * @param destination 
+   * @param sources 
+   */
+  public extendOwn(destination: Object, ...sources: Array<Object>): Object {
+    return _.extendOwn(destination, ...sources);
+  }
+
 }
