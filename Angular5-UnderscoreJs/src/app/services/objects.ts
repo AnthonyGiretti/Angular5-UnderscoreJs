@@ -166,4 +166,13 @@ export class ObjectsService {
     return _.property(path);
   }
 
+  /**
+   * Inverse of _.property. 
+   * Takes an object and returns a function which will return the value of a provided property.
+   * @param object 
+   */
+  public propertyOf(object: Object): Function {
+    return _.propertyOf(object);
+  }
+
 }
