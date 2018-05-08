@@ -175,4 +175,11 @@ export class ObjectsService {
     return _.propertyOf(object);
   }
 
+  /**
+   * Returns a predicate function that will tell you if a passed in object contains all of the key/value properties present in attrs.
+   * @param attributes 
+   */
+  public matcher(attributes: Object): Function {
+    return _.matcher(attributes);
+  }
 }
