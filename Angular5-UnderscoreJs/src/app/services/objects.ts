@@ -133,4 +133,11 @@ export class ObjectsService {
     }
   }
 
+  /**
+   * Returns object after filling in its undefined properties with the first value present in the following list of defaults objects.
+   */
+  public defaults(originalObject: Object, ...defaults: Array<Object>): Object {
+    return _.defaults(originalObject, ...defaults);
+  }
+
 }
