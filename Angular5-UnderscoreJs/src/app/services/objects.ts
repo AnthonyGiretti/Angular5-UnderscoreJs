@@ -104,4 +104,20 @@ export class ObjectsService {
     return _.extendOwn(destination, ...sources);
   }
 
+  /**
+   * Return a copy of the object, filtered to only have values for the whitelisted keys (or array of valid keys). 
+   * Alternatively accepts a predicate indicating which keys to pick.
+   * @param originalObject 
+   * @param delegate 
+   * @param keys 
+   */
+  public pick(originalObject: Object, delegate?: Function, ...keys: Array<String>): Object {
+    if (delegate == null) {
+      return _.pick(originalObject, ...keys);
+    }
+    else {
+      return _.pick(originalObject, delegate);
+    }
+  }
+
 }
