@@ -347,6 +347,13 @@ export class AppComponent implements OnInit {
     console.log(this._helper.Objects.pick({name: "Anthony", city: "Montréal", country: "Canada"}, (value, key, object) => {
       return key == "name";
     }));
+
+    console.log("omit sample: ");
+    console.log(this._helper.Objects.omit({name: "Anthony", city: "Montréal", country: "Canada"}, null, "name", "country"));
+    console.log("omit sample: ");
+    console.log(this._helper.Objects.omit({name: "Anthony", city: "Montréal", country: "Canada"}, (value, key, object) => {
+      return key == "name";
+    }));
   }
 
 }
