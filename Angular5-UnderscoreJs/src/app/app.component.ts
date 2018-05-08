@@ -361,6 +361,11 @@ export class AppComponent implements OnInit {
     console.log("clone sample: ");
     var objectToClone = {name: "Anthony", city: "Montréal", country: "Canada"};
     console.log(this._helper.Objects.clone(objectToClone));
+
+    console.log("has sample: ");
+    console.log(this._helper.Objects.has({name: "Anthony", city: "Montréal", country: "Canada"}, "name"));
+
+
   }
 
 }
