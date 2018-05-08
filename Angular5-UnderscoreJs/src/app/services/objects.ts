@@ -157,4 +157,13 @@ export class ObjectsService {
     return _.has(object,key);
   }
 
+  /**
+   * Returns a function that will return the specified property of any passed-in object. 
+   * path may be specified as a simple key, or as an array of object keys or array indexes, for deep property fetching.
+   * @param keys 
+   */
+  public property(keys: String | Array<String>): Function {
+    return _.property(keys);
+  }
+
 }
