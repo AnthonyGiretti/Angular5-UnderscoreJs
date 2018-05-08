@@ -334,6 +334,9 @@ export class AppComponent implements OnInit {
       this.Country = "Canada"
     }
     console.log(this._helper.Objects.findKey(new Person(), (prop) => { return prop.toLowerCase() == "canada"}));
+
+    console.log("extend sample: ");
+    console.log(this._helper.Objects.extend({name: "Anthony"}, {city: "Montréal"}, {country: "Canada"}));
   }
 
 }
