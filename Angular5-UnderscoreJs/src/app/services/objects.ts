@@ -83,4 +83,17 @@ export class ObjectsService {
   public findKey(object: Object, delegate: Function): String {
     return _.findKey(object, delegate);
   }
+
+  /**
+   * Shallowly copy all of the properties in the source objects over to the destination object, and return the destination object. 
+   * Any nested objects or arrays will be copied by reference, not duplicated. 
+   * It's in-order, so the last source will override properties of the same name in previous arguments.
+   * @param destination 
+   * @param sources 
+   */
+  public extend(destination: Object, ...sources: Array<Object>): Object {
+    return _.extend(destination, ...sources);
+  }
+
+  
 }
