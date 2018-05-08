@@ -374,6 +374,10 @@ export class AppComponent implements OnInit {
     var stooges = {moe: {fears: {worst: 'Spiders'}}, curly: {fears: {worst: 'Moe'}}};
     var moesWorstFear = this._helper.Objects.propertyOf(stooges);
     console.log(moesWorstFear(['moe', 'fears', 'worst']));
+
+    console.log("matcher sample: ");
+    var matcher = this._helper.Objects.matcher({name: "Anthony", city: "Montréal"});
+    console.log(this._helper.Collections.filter({name: "Anthony", city: "Montréal", country: "Canada"}, matcher));
   }
 
 }
