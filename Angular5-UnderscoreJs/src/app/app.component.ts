@@ -369,6 +369,11 @@ export class AppComponent implements OnInit {
     var stooges = {moe: {fears: {worst: 'Spiders'}}, curly: {fears: {worst: 'Moe'}}};
     var moesWorstFear = this._helper.Objects.property(['moe', 'fears', 'worst']);
     console.log(moesWorstFear(stooges));
+
+    console.log("propertyOf sample: ");
+    var stooges = {moe: {fears: {worst: 'Spiders'}}, curly: {fears: {worst: 'Moe'}}};
+    var moesWorstFear = this._helper.Objects.propertyOf(stooges);
+    console.log(moesWorstFear(['moe', 'fears', 'worst']));
   }
 
 }
