@@ -162,8 +162,8 @@ export class ObjectsService {
    * path may be specified as a simple key, or as an array of object keys or array indexes, for deep property fetching.
    * @param keys 
    */
-  public property(keys: String | Array<String>): Function {
-    return _.property(keys);
+  public property(path: String | Array<String>): Function {
+    return _.property(path);
   }
 
 }

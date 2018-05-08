@@ -365,7 +365,10 @@ export class AppComponent implements OnInit {
     console.log("has sample: ");
     console.log(this._helper.Objects.has({name: "Anthony", city: "Montréal", country: "Canada"}, "name"));
 
-
+    console.log("property sample: ");
+    var stooges = {moe: {fears: {worst: 'Spiders'}}, curly: {fears: {worst: 'Moe'}}};
+    var moesWorstFear = this._helper.Objects.property(['moe', 'fears', 'worst']);
+    console.log(moesWorstFear(stooges));
   }
 
 }
