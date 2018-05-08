@@ -357,6 +357,8 @@ export class AppComponent implements OnInit {
 
     console.log("defaults sample: ");
     console.log(this._helper.Objects.defaults({name: "Anthony", city: "Montréal", country: "Canada"}, {province: "Québec"}, {continent: "North America"}));
+
+    
   }
 
 }

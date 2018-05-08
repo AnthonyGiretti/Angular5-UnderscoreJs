@@ -140,4 +140,13 @@ export class ObjectsService {
     return _.defaults(originalObject, ...defaults);
   }
 
+  /**
+   * Create a shallow-copied clone of the provided plain object. 
+   * Any nested objects or arrays will be copied by reference, not duplicated.
+   * @param originalObject 
+   */
+  public clone(originalObject: Object): Object {
+    return _.clone(originalObject);
+  }
+
 }
