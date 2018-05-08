@@ -182,4 +182,13 @@ export class ObjectsService {
   public matcher(attributes: Object): Function {
     return _.matcher(attributes);
   }
+
+  /**
+   * Performs an optimized deep comparison between the two objects, to determine if they should be considered equal.
+   * @param objectToCompare 
+   * @param otherObjectToCompare 
+   */
+  public isEqual(objectToCompare: Object, otherObjectToCompare: Object) {
+    return _.isEqual(objectToCompare, otherObjectToCompare);
+  }
 }
