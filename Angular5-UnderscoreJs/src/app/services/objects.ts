@@ -149,4 +149,12 @@ export class ObjectsService {
     return _.clone(originalObject);
   }
 
+  /** 
+   * Does the object contain the given key? Identical to object.hasOwnProperty(key), 
+   * but uses a safe reference to the hasOwnProperty function, in case it's been overridden accidentally. 
+   */
+  public has(object: Object, key: String): Boolean {
+    return _.has(object,key);
+  }
+
 }
