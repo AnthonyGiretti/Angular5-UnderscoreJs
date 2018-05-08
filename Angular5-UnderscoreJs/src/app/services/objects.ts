@@ -120,4 +120,17 @@ export class ObjectsService {
     }
   }
 
+  /**
+   * Return a copy of the object, filtered to omit the blacklisted keys (or array of keys). 
+   * Alternatively accepts a predicate indicating which keys to omit.
+   */
+  public omit(originalObject: Object, delegate?: Function, ...keys: Array<String>): Object {
+    if (delegate == null) {
+      return _.omit(originalObject, ...keys);
+    }
+    else {
+      return _.omit(originalObject, delegate);
+    }
+  }
+
 }
