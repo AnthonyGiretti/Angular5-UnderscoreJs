@@ -188,7 +188,16 @@ export class ObjectsService {
    * @param objectToCompare 
    * @param otherObjectToCompare 
    */
-  public isEqual(objectToCompare: Object, otherObjectToCompare: Object) {
+  public isEqual(objectToCompare: Object, otherObjectToCompare: Object): Boolean {
     return _.isEqual(objectToCompare, otherObjectToCompare);
+  }
+
+  /**
+   * Tells you if the keys and values in properties are contained in object.
+   * @param object 
+   * @param attributes 
+   */
+  public isMatch(object: Object, attributes: Object): Boolean {
+    return _.isMatch(object, attributes);
   }
 }

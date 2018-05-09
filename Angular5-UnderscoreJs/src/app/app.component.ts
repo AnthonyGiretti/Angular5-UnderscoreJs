@@ -384,6 +384,7 @@ export class AppComponent implements OnInit {
     var object2 = {name: "Anthony", city: "Montréal"};
     console.log(object1 == object2);
     console.log(this._helper.Objects.isEqual(object1, object2));
+
   }
 
 }
