@@ -385,6 +385,8 @@ export class AppComponent implements OnInit {
     console.log(object1 == object2);
     console.log(this._helper.Objects.isEqual(object1, object2));
 
+    console.log("isMatch sample: ");
+    console.log(this._helper.Objects.isMatch({name: "Anthony", city: "Montréal", country: "Canada"}, {name: "Anthony", city: "Montréal"}));
   }
 
 }
