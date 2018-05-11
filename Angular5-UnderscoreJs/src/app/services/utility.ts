@@ -27,6 +27,15 @@ export class UtilityService {
     return _.random(min, max);
   }
 
+  /**
+   * Generate a globally-unique id for client-side models or DOM elements that need one. 
+   * If prefix is passed, the id will be appended to it.
+   * @param prefix 
+   */
+  public uniqueId(prefix: String): String {
+    return _.uniqueId(prefix);
+  }
+
   
 
 }
