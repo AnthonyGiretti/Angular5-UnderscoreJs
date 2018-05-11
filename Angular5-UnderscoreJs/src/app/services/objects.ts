@@ -337,4 +337,12 @@ export class ObjectsService {
     return _.isSet(object);
   }
 
+  /**
+   * Returns true if object is a WeakSet.
+   * @param object 
+   */
+  public isWeakSet(object: any): Boolean {
+    return _.isWeakSet(object);
+  }
+
 }
