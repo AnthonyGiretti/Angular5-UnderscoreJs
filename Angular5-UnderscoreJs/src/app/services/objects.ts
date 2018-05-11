@@ -257,5 +257,63 @@ export class ObjectsService {
     return _.isString(object);
   }
 
+  /**
+   * Returns true if object is a Number (including NaN).
+   * @param object 
+   */
+  public isNumber(object: any): Boolean {
+    return _.isNumber(object);
+  }
+
+  /**
+   * Returns true if object is a finite Number.
+   * @param object 
+   */
+  public isFinite(object: any): Boolean {
+    return _.isFinite(object);
+  }
+
+  /**
+   * Returns true if object is either true or false.
+   * @param object 
+   */
+  public isBoolean(object: any): Boolean {
+    return _.isBoolean(object);
+  }
+
+  /**
+   * Returns true if object is a Date.
+   * @param object 
+   */
+  public isDate(object: any): Boolean {
+    return _.isDate(object);
+  }
+
+  /**
+   * Returns true if object is a RegExp.
+   * @param object 
+   */
+  public isRegExp(object: any): Boolean {
+    return _.isRegExp(object);
+  }
+
+  /**
+   * Returns true if object inherits from an Error.
+   * @param object 
+   */
+  public isError(object: any): Boolean {
+    return _.isError(object);
+  }
+
+  /**
+   * Returns true if object is a Symbol.
+   * @param object 
+   */
+  public isSymbol(object: any): Boolean {
+    return _.isSymbol(object);
+  }
+
+  
+
 
 }
