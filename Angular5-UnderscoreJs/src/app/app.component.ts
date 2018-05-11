@@ -387,6 +387,15 @@ export class AppComponent implements OnInit {
 
     console.log("isMatch sample: ");
     console.log(this._helper.Objects.isMatch({name: "Anthony", city: "Montréal", country: "Canada"}, {name: "Anthony", city: "Montréal"}));
+
+    console.log("isEmpty sample: ");
+    console.log(this._helper.Objects.isEmpty({name: "Anthony", city: "Montréal", country: "Canada"}));
+    console.log("isEmpty sample: ");
+    console.log(this._helper.Objects.isEmpty({}));
+    console.log("isEmpty sample: ");
+    console.log(this._helper.Objects.isEmpty(["Banana", "Orange", "Apple", "Mango"]));
+    console.log("isEmpty sample: ");
+    console.log(this._helper.Objects.isEmpty([]));
   }
 
 }
