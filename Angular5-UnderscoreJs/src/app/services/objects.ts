@@ -209,4 +209,12 @@ export class ObjectsService {
   public isEmpty<T>(object: T): Boolean {
     return _.isEmpty(object);
   }
+
+  /**
+   * Returns true if object is a DOM element.
+   */
+  public isElement(domElement: any): Boolean {
+    return _.isElement(domElement);
+  }
+
 }
