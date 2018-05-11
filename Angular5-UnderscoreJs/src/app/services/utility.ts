@@ -14,6 +14,19 @@ export class UtilityService {
    * @param delegate 
    */
   public times(times: Number, delegate: Function): void {
-      _.times(times, delegate);
+    _.times(times, delegate);
   }
+
+  /**
+   * Returns a random integer between min and max, inclusive. 
+   * If you only pass one argument, it will return a number between 0 and that number.
+   * @param min 
+   * @param max 
+   */
+  public random(min: Number, max: Number): Number {
+    return _.random(min, max);
+  }
+
+  
+
 }
