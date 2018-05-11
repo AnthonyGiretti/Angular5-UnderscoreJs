@@ -52,6 +52,12 @@ export class UtilityService {
     return _.unescape(string);
   }
 
-  
+  /**
+   * Returns an integer timestamp for the current time, using the fastest method available in the runtime. 
+   * Useful for implementing timing/animation functions.
+   */
+  public now(): Number {
+    return _.now();  
+  }
 
 }
