@@ -321,5 +321,12 @@ export class ObjectsService {
     return _.isMap(object);
   }
 
+  /**
+   * Returns true if object is a WeakMap.
+   * @param object 
+   */
+  public isWeakMap(object): Boolean {
+    return _.isWeakMap(object);
+  }
 
 }
