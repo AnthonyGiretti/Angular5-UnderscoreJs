@@ -396,6 +396,11 @@ export class AppComponent implements OnInit {
     console.log(this._helper.Objects.isEmpty(["Banana", "Orange", "Apple", "Mango"]));
     console.log("isEmpty sample: ");
     console.log(this._helper.Objects.isEmpty([]));
+
+    // Objects
+    console.log("template sample: ");
+    var tplFilled = this._helper.Utility.template("hello: <%= name %>");
+    console.log(tplFilled({name: 'moe'}));
   }
 
 }

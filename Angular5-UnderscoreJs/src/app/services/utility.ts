@@ -69,7 +69,7 @@ export class UtilityService {
    * The settings argument should be a hash containing any _.templateSettings that should be overridden.
    * @param template 
    */
-  public template(template: String): String {
+  public template(template: String): Function {
     return _.template(template);
   }
 
