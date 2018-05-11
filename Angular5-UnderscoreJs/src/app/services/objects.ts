@@ -200,4 +200,13 @@ export class ObjectsService {
   public isMatch(object: Object, attributes: Object): Boolean {
     return _.isMatch(object, attributes);
   }
+
+  /**
+   * Returns true if an enumerable object contains no values (no enumerable own-properties). 
+   * For strings and array-like objects _.isEmpty checks if the length property is 0.
+   * @param object 
+   */
+  public isEmpty<T>(object: T): Boolean {
+    return _.isEmpty(object);
+  }
 }
