@@ -345,4 +345,22 @@ export class ObjectsService {
     return _.isWeakSet(object);
   }
 
+  /**
+   * Returns true if object is NaN.
+    Note: this is not the same as the native isNaN function, 
+    which will also return true for many other not-number values, such as undefined.
+   * @param object 
+   */
+  public isNan(object: any): Boolean {
+    return _.isNan(object);
+  }
+
+  /**
+   * Returns true if the value of object is null.
+   * @param object 
+   */
+  public isNull(object: any): Boolean {
+    return _.isNull(object);
+  }
+
 }
