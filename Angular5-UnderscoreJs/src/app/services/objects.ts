@@ -363,4 +363,11 @@ export class ObjectsService {
     return _.isNull(object);
   }
 
+  /**
+   * Returns true if value is undefined.
+   */
+  public isUndefined(object: any): Boolean {
+    return _.isUndefined(object);
+  }
+
 }
