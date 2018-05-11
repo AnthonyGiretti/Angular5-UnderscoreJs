@@ -36,6 +36,14 @@ export class UtilityService {
     return _.uniqueId(prefix);
   }
 
+  /**
+   * Escapes a string for insertion into HTML, replacing &, <, >, ", `, and ' characters.
+   * @param string 
+   */
+  public escape(string: String): String {
+    return _.escape(string);
+  }
+
   
 
 }
