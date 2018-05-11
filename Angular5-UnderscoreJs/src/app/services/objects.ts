@@ -249,7 +249,13 @@ export class ObjectsService {
     return _.isFunction(object);
   }
 
-  
+  /**
+   * Returns true if object is a String.
+   * @param object 
+   */
+  public isString(object: any): Boolean {
+    return _.isString(object);
+  }
 
 
 }
