@@ -44,6 +44,14 @@ export class UtilityService {
     return _.escape(string);
   }
 
+  /**
+   * The opposite of escape, replaces &amp;, &lt;, &gt;, &quot;, &#96; and &#x27; with their unescaped counterparts.
+   * @param string 
+   */
+  public unescape(string: String): String {
+    return _.unescape(string);
+  }
+
   
 
 }
