@@ -313,7 +313,13 @@ export class ObjectsService {
     return _.isSymbol(object);
   }
 
-  
+  /**
+   * Returns true if object is a Map.
+   * @param object 
+   */
+  public isMap(object: any): Boolean {
+    return _.isMap(object);
+  }
 
 
 }
