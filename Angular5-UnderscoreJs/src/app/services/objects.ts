@@ -225,4 +225,21 @@ export class ObjectsService {
     return _.isArray(object);
   }
 
+  /**
+   * Returns true if value is an Object. 
+   * Note that JavaScript arrays and functions are objects, while (normal) strings and numbers are not.
+   * @param object 
+   */
+  public isObject(object: any): Boolean {
+    return _.isObject(object);
+  }
+
+  /**
+   * Returns true if object is an Arguments object.
+   * @param object 
+   */
+  public isArguments(object: any): Boolean {
+    return _.isArguments(object);
+  }
+
 }
