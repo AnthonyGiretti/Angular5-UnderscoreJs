@@ -217,4 +217,12 @@ export class ObjectsService {
     return _.isElement(domElement);
   }
 
+  /**
+   * Returns true if object is an Array.
+   * @param object 
+   */
+  public isArray(object: any): Boolean {
+    return _.isArray(object);
+  }
+
 }
