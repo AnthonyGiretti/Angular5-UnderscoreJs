@@ -242,4 +242,14 @@ export class ObjectsService {
     return _.isArguments(object);
   }
 
+  /**
+   * Returns true if object is a Function.
+   */
+  public isFunction(object: any): Boolean {
+    return _.isFunction(object);
+  }
+
+  
+
+
 }
